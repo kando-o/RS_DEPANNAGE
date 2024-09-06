@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { FaPhone, FaCheck } from 'react-icons/fa';
 
-const SwipeableButton = ({ onSuccess, text = "SLIDE TO UNLOCK" }) => {
+const SwipeableButton = ({ onSuccess, text = "SLIDE TO CONFIRM" }) => {
   const [isActive, setIsActive] = useState(false);
   const [isDragging, setIsDragging] = useState(false);
   const [sliderPosition, setSliderPosition] = useState(0);
@@ -11,10 +12,12 @@ const SwipeableButton = ({ onSuccess, text = "SLIDE TO UNLOCK" }) => {
     const handleMouseMove = (e) => {
       if (!isDragging) return;
       const containerRect = containerRef.current.getBoundingClientRect();
-      const newPosition = Math.max(0, Math.min(e.clientX - containerRect.left, containerRect.width - sliderRef.current.offsetWidth));
+      const sliderWidth = sliderRef.current.offsetWidth;
+      const maxPosition = containerRect.width - sliderWidth - 8;
+      const newPosition = Math.max(0, Math.min(e.clientX - containerRect.left, maxPosition));
       setSliderPosition(newPosition);
 
-      if (newPosition >= containerRect.width - sliderRef.current.offsetWidth - 5) {
+      if (newPosition >= maxPosition) {
         setIsActive(true);
         setIsDragging(false);
         onSuccess();
@@ -23,7 +26,7 @@ const SwipeableButton = ({ onSuccess, text = "SLIDE TO UNLOCK" }) => {
 
     const handleMouseUp = () => {
       if (isDragging && !isActive) {
-        setSliderPosition(0);
+        setSliderPosition(0); 
       }
       setIsDragging(false);
     };
@@ -53,11 +56,11 @@ const SwipeableButton = ({ onSuccess, text = "SLIDE TO UNLOCK" }) => {
       </div>
       <div
         ref={sliderRef}
-        className={`absolute top-0 left-0 w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center text-white transition-colors ${isActive ? 'bg-green-500' : ''}`}
+        className={`absolute top-1 left-1 w-10 h-10 rounded-full flex items-center justify-center text-white transition-colors ${isActive ? 'bg-green-500' : 'bg-blue-500'}`}
         style={{ transform: `translateX(${sliderPosition}px)` }}
         onMouseDown={handleMouseDown}
       >
-        {isActive ? '✓' : '→'}
+        {isActive ? <FaCheck size={18} /> : <FaPhone size={18} />} 
       </div>
     </div>
   );

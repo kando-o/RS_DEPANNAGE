@@ -5,7 +5,6 @@ const Contact = () => {
 
     const handleSuccess = () => {
         console.log("Button unlocked!");
-        // Add your success logic here
     };
 
   return (
