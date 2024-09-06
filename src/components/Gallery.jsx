@@ -20,7 +20,7 @@ const Gallery = () => {
             Notre Gallerie 
         </div>
         <h1 className='text-3xl sm:text-4xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text mb-5 text-center'>
-        Découverer notre Gallerie ?
+        Découverer notre Gallerie ! 
         </h1>
         <ImageSlider 
         images={images}

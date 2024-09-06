@@ -4,9 +4,14 @@ import { FaPhoneAlt, FaCheck } from 'react-icons/fa';
 import { MdEmail } from "react-icons/md";
 
 const Contact = () => {
-  const handleSuccess = () => {
-    console.log("Button unlocked!");
-  };
+
+    const handlePhoneSuccess = () => {
+        window.location.href = "tel:0033622222018"; 
+      };
+    
+      const handleEmailSuccess = () => {
+        window.location.href = "mailto:test@autoxp.fr";
+      };
 
   return (
     <div id='contact' className='flex flex-col items-center gap-6 py-14 bg-slate-100'>
@@ -22,7 +27,7 @@ const Contact = () => {
           Appelez Nous!
         </h2>
         <SwipeableButton
-          onSuccess={handleSuccess}
+          onSuccess={handlePhoneSuccess}
           text="0033622222018"
           startIcon={FaPhoneAlt}
           endIcon={FaCheck}
@@ -31,7 +36,7 @@ const Contact = () => {
           Contactez Nous!
         </h2>
         <SwipeableButton
-          onSuccess={handleSuccess}
+          onSuccess={handleEmailSuccess}
           text="Glisser pour contacter"
           startIcon={MdEmail}
           endIcon={FaCheck}
