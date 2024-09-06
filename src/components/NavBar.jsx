@@ -3,12 +3,13 @@ import React, { useState, useEffect, useRef } from 'react';
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuRef = useRef(null);
+  const navbarRef = useRef(null);
 
   const navItems = [
     { name: 'Acceuil', href: '#', current: true },
-    { name: 'A propos de nous', href: '#', current: false },
-    { name: 'Rachat', href: '#', current: false },
-    { name: 'Contact', href: '#', current: false },
+    { name: 'A propos de nous', href: '#about', current: false },
+    { name: 'Rachat', href: '#rachat', current: false },
+    { name: 'Contact', href: '#contact', current: false },
   ];
 
   useEffect(() => {
@@ -24,8 +25,25 @@ const Navbar = () => {
     };
   }, [menuRef]);
 
+  const handleSmoothScroll = (e, href) => {
+    e.preventDefault();
+    const targetId = href.replace('#', '');
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      const navbarHeight = navbarRef.current ? navbarRef.current.offsetHeight : 0;
+      const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+      const offsetPosition = targetPosition - navbarHeight - 10; 
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+    setIsMenuOpen(false);
+  };
+
   return (
-    <nav className="bg-white bg-opacity-20 backdrop-blur-lg dark:bg-white/10 fixed w-full z-20 top-0 start-0">
+    <nav ref={navbarRef} className="bg-white bg-opacity-20 backdrop-blur-lg dark:bg-white/10 fixed w-full z-20 top-0 start-0">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="https://flowbite.com/" className="flex items-center space-x-3 rtl:space-x-reverse">
           <img src="https://flowbite.com/docs/images/logo.svg" className="h-8" alt="Flowbite Logo" />
@@ -72,6 +90,7 @@ const Navbar = () => {
               <li key={item.name}>
                 <a
                   href={item.href}
+                  onClick={(e) => handleSmoothScroll(e, item.href)}
                   className={`block py-2 px-3 rounded md:bg-transparent md:p-0 ${
                     item.current
                       ? 'text-black bg-zinc-00 md:dark:text-black'
