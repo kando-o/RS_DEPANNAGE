@@ -24,8 +24,8 @@ const AutoLogoSlider = () => {
 
         <Swiper
           modules={[Autoplay, Pagination]}
-          spaceBetween={20}
-          slidesPerView={2}
+          spaceBetween={10}
+          slidesPerView={3}
           loop={true}
           autoplay={{
             delay: 1000,

@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import testImage from '../assets/images/pic1.jpeg';
 
 import 'swiper/css';
 import 'swiper/css/pagination';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const testimonials = [
   {
@@ -42,6 +46,38 @@ const testimonials = [
 ];
 
 const Testimonial = () => {
+  const cardsRef = useRef([]);
+
+  useEffect(() => {
+    
+    const animateCards = gsap.fromTo(
+      cardsRef.current,
+      { opacity: 0, y: 50 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        stagger: 0.3,  
+        ease: 'power2.out',
+        scrollTrigger: {
+          trigger: cardsRef.current[0],  // Start when the first card is in view
+          start: 'top 80%',
+          toggleActions: 'play none none reverse',
+        },
+      }
+    );
+
+    return () => {
+      animateCards.kill();
+    };
+  }, []);
+
+  const addToRefs = (el) => {
+    if (el && !cardsRef.current.includes(el)) {
+      cardsRef.current.push(el);
+    }
+  };
+
   return (
     <section className="px-8 py-10 rounded-lg">
       <div className="max-w-6xl mx-auto">
@@ -56,7 +92,6 @@ const Testimonial = () => {
           modules={[Pagination]}
           spaceBetween={24}
           grabCursor={true}
-          // pagination={{ clickable: true, dynamicBullets: false }}
           breakpoints={{
             640: {
               slidesPerView: 1,
@@ -75,7 +110,10 @@ const Testimonial = () => {
         >
           {testimonials.map((testimonial, index) => (
             <SwiperSlide key={index}>
-              <div className="bg-white p-6 rounded-lg border border-slate-200 flex flex-col">
+              <div
+                ref={addToRefs}  
+                className="bg-white p-6 rounded-lg border border-slate-200 flex flex-col"
+              >
                 <div className="flex items-center mb-4">
                   <img
                     src={testimonial.img}
