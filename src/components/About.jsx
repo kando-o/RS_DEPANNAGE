@@ -22,7 +22,7 @@ const About = () => {
   }, []);
 
   return (
-    <div id='about' className='relative w-full mb-64'>
+    <div id='about' className='relative w-full mb-64 md:mb-10'>
       <div className='w-full h-auto invisible md:visible lg:visible'>
         <img 
           src={aboutImage} 
@@ -34,7 +34,7 @@ const About = () => {
         <div className='py-1 px-4 rounded-full border border-pink-600 text-sm font-extralight text-pink-600 mb-6'>
           Qui sommes nous ?
         </div>
-        <h1 className='text-4xl bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text md:text-5xl lg:text-6xl font-bold text-center mb-6 about-header'>
+        <h1 className='text-3xl bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text md:text-5xl lg:text-6xl font-bold text-center mb-6 about-header'>
           À propos de nous
         </h1>
         <p className='text-base md:text-lg lg:text-xl text-center max-w-3xl about-description'>

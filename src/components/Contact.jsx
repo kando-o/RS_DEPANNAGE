@@ -10,7 +10,7 @@ const Contact = () => {
       };
     
       const handleEmailSuccess = () => {
-        window.location.href = "mailto:test@autoxp.fr";
+        window.location.href = "mailto:support@autoxp.fr";
       };
 
   return (
@@ -18,7 +18,7 @@ const Contact = () => {
       <div className='py-1 px-4 rounded-full border border-pink-600 text-sm font-extralight text-pink-600'>
         Contact
       </div>
-      <h1 className='text-3xl sm:text-4xl font-bold bg-gradient-to-r from-purple-600 to-orange-400 text-transparent bg-clip-text mb-2 text-center'>
+      <h1 className='text-2xl sm:text-4xl font-bold bg-gradient-to-r from-purple-600 to-orange-400 text-transparent bg-clip-text mb-2 text-center'>
         Qu'est-ce que vous attendez ?
       </h1>
       <p className='text-gray-600 text-sm md:text-lg'>Demandez l’enlèvement de votre épave 7j/7 et 13h/24</p>

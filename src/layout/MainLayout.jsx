@@ -10,6 +10,7 @@ import Gallery from '../components/Gallery';
 import Testimonial from '../components/Testimonial';
 import ContactForm from '../components/ContactForm';
 import AutoLogoSlider from '../components/AutoLogoSlider';
+import Footer from '../components/Footer';
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -58,6 +59,7 @@ const MainLayout = () => {
       <div ref={addToRefs}><Gallery /></div>
       <div ref={addToRefs}><Testimonial /></div>
       <div ref={addToRefs}><ContactForm /></div>
+      <div><Footer /></div>
     </div>
   );
 };

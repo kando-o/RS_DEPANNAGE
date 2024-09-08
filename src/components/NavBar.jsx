@@ -51,7 +51,7 @@ const Navbar = () => {
         <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
           <button
             type="button"
-            className="border-2 border-zinc-800 hover:bg-zinc-900 hover:text-white focus:outline-none font-medium rounded-lg text-sm px-4 py-2 text-center"
+            className="border-2 border-zinc-800 hover:bg-gray-900 hover:text-white focus:outline-none font-medium rounded-lg text-sm px-4 py-2 text-center"
           >
             Appelez-nous !
           </button>
@@ -94,7 +94,7 @@ const Navbar = () => {
                   className={`block py-2 px-3 rounded md:bg-transparent md:p-0 ${
                     item.current
                       ? 'text-black bg-zinc-00 md:dark:text-black'
-                      : 'text-white hover:bg-gray-100 md:hover:bg-transparent md:hover:text-black dark:text-zinc-600 dark:hover:bg-gray-700 dark:hover:text-black md:dark:hover:bg-transparent dark:border-gray-700'
+                      : 'text-white hover:bg-gray-100 md:hover:bg-transparent md:hover:text-gray-900 dark:text-zinc-600 dark:hover:bg-gray-700 dark:hover:text-black md:dark:hover:bg-transparent dark:border-gray-700'
                   }`}
                   aria-current={item.current ? 'page' : undefined}
                 >

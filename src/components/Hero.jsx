@@ -46,7 +46,7 @@ const Hero = () => {
       </p>
       <button
         ref={buttonRef}
-        className="bg-black text-white font-semibold py-2 px-5 md:py-3 md:px-6 rounded-full text-sm md:text-lg hover:bg-gray-800 transition-colors"
+        className="bg-gray-900 text-white font-semibold py-2 px-5 md:py-3 md:px-6 rounded-full text-sm md:text-lg hover:bg-gray-800 transition-colors"
       >
         Get started free →
       </button>

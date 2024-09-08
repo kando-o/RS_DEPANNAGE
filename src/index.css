@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+    overflow-x: hidden;
+}
+
 .clr{
     background: linear-gradient(179deg, #FFF 0.97%, #69A5FF 134.34%);
 }
