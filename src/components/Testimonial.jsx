@@ -3,7 +3,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import testImage from '../assets/images/pic1.jpeg';
+import male from '../assets/images/male.png';
+import female from '../assets/images/female.png';
 
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -12,36 +13,32 @@ gsap.registerPlugin(ScrollTrigger);
 
 const testimonials = [
   {
-    name: "Ould Menouer Ilies",
-    client: "Mobile Development Lead",
-    img: testImage,
+    name: "Jean Dupont",
+    client: "Client, Lyon",
+    img: male,
     stars: 4,
-    description:
-      "I had the pleasure of studying alongside Zeyd and collaborating with him in our scientific club, and I can confidently say that he is an exceptional software engineer. Zeyd excels in collaboration and communication, making him a valuable team member and leader in any project",
+    description: "Je ne savais pas à qui m'adresser pour me débarrasser de ma vieille voiture, mais cette entreprise m'a été recommandée. Je suis ravi du service! Je recommande vivement leurs services à tous ceux qui cherchent une solution rapide.",
   },
   {
-    name: "Ould Menouer Ilies",
-    client: "Mobile Development Lead",
-    img: testImage,
-    stars: 4,
-    description:
-      "I had the pleasure of studying alongside Zeyd and collaborating with him in our scientific club, and I can confidently say that he is an exceptional software engineer. Zeyd excels in collaboration and communication, making him a valuable team member and leader in any project",
+    name: "Sophie Martin",
+    client: "Client, Paris",
+    img: female,
+    stars: 5,
+    description: "Service impeccable du début à la fin. J'avais une vieille voiture qui prenait de la place dans mon garage depuis des années, et en un simple appel, tout était réglé. L'équipe était professionnelle et sympathique.",
   },
   {
-    name: "Ould Menouer Ilies",
-    client: "Mobile Development Lead",
-    img: testImage,
+    name: "Pierre Lemoine",
+    client: "Client, Marseille",
+    img: male,
     stars: 4,
-    description:
-      "I had the pleasure of studying alongside Zeyd and collaborating with him in our scientific club, and I can confidently say that he is an exceptional software engineer. Zeyd excels in collaboration and communication, making him a valuable team member and leader in any project",
+    description: "J'étais sceptique au départ, mais tout s'est parfaitement déroulé. Franchement, un excellent service que je recommande les yeux fermés !",
   },
   {
-    name: "Ould Menouer Ilies",
-    client: "Mobile Development Lead",
-    img: testImage,
-    stars: 4,
-    description:
-      "I had the pleasure of studying alongside Zeyd and collaborating with him in our scientific club, and I can confidently say that he is an exceptional software engineer. Zeyd excels in collaboration and communication, making him a valuable team member and leader in any project",
+    name: "Lucas Moreau",
+    client: "Client, Bordeaux",
+    img: male,
+    stars: 5,
+    description: "Une prestation au top ! Le processus a été simple et rapide, et l'équipe très courtoise.Très satisfait de l'efficacité et du professionnalisme de cette entreprise.",
   },
 ];
 
