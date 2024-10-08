@@ -14,11 +14,11 @@ const Footer = () => {
           <div>
             <h2 className="text-2xl font-bold mb-4">
               <span className="bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">
-                AutoXP
+                AGISSAUTO
               </span>
             </h2>
             <p className="text-sm text-gray-400 mb-4">
-              Service d'Enlèvement Épave Gratuit, disponible partout en France, pour vous débarrasser de vos VHU
+              AGISSAUTO by AutoXP, Un service d'Enlèvement Épave Gratuit, disponible partout en France, pour vous débarrasser de vos VHU
             </p>
             <button className="bg-gradient-to-r from-blue-400 to-purple-500 hover:scale-105 text-white font-bold py-2 px-4 rounded transition" onClick={handleClick}>
               Contactez Nous

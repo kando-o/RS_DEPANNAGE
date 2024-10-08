@@ -36,7 +36,7 @@ const Hero = () => {
         ref={(el) => textRefs.current[1] = el}
         className="text-base md:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto mt-4 md:mt-6"
       >
-        Vendre sa voiture avec <span className='font-bold'>AutoXP</span>, c'est facile, rapide & sûr!
+        Vendre sa voiture avec <span className='font-bold'>AGISSAUTO</span>, c'est facile, rapide & sûr!
       </p>
       <p
         ref={(el) => textRefs.current[2] = el}

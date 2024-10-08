@@ -14,7 +14,7 @@ function App() {
               "@context": "https://schema.org",
               "@type": "AutoService",
               "name": "Enlèvement des épaves 100% Gratuit sur toute la france ",
-              "description": " une agence professionnelle pour l'enlèvement gratuit de votre épave en france , Vendre sa voiture avec AutoXP, c'est facile, rapide & sûr!",
+              "description": " une agence professionnelle pour l'enlèvement gratuit de votre épave en france , Vendre sa voiture avec AGISSAUTO, c'est facile, rapide & sûr!",
               "image": "https://yourwebsite.com/images/car-removal.jpg",
               "url": "https://yourwebsite.com",
               "telephone": "+33622222018",
