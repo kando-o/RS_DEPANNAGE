@@ -42,6 +42,10 @@ const Navbar = () => {
     setIsMenuOpen(false);
   };
 
+  const handleClick = () =>{
+    window.location.href = "tel:+33622222018";
+  }
+
   return (
     <nav ref={navbarRef} className="bg-white bg-opacity-20 backdrop-blur-lg dark:bg-white/10 fixed w-full z-20 top-0 start-0">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
@@ -52,6 +56,7 @@ const Navbar = () => {
           <button
             type="button"
             className="border-2 border-zinc-800 hover:bg-gray-900 hover:text-white focus:outline-none font-medium rounded-lg text-sm px-4 py-2 text-center"
+            onClick={handleClick}
           >
             Appelez-nous !
           </button>
