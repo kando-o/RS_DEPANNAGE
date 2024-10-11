@@ -34,7 +34,7 @@ export default function ContactForm() {
           </div>
         </div>
 
-        <form name="contact" method="POST" data-netlify="true" className="w-full lg:w-2/3 grid gap-4 md:gap-6">
+        <form name="contact" method="POST" data-netlify="true" className="w-full lg:w-2/3 grid gap-4 md:gap-6" netlify>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
             <div>
               <input type="text" name="name" placeholder="Nom et Prenom" className="w-full px-3 py-2 md:px-4 md:py-3 bg-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 text-sm md:text-base" required />
