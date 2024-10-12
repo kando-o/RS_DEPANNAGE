@@ -34,10 +34,10 @@ const About = () => {
         <div className='py-1 px-4 rounded-full border border-pink-600 text-sm font-extralight text-pink-600 mb-6'>
           Qui sommes nous ?
         </div>
-        <h1 className='text-3xl bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text md:text-5xl lg:text-6xl font-bold text-center mb-6 about-header'>
+        <h1 className='text-3xl bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text md:text-4xl lg:text-4xl font-bold text-center mb-6 about-header'>
           À propos de nous
         </h1>
-        <p className='text-base md:text-lg lg:text-xl text-center max-w-3xl about-description'>
+        <p className='text-base md:text-lg lg:text-lg text-center max-w-3xl about-description'>
         Vous avez un véhicule que vous n’utilisez pas, parce que trop vieux ou hors d’usage, et vous souhaitez vous en débarrasser ? <br />Faites appel au service d’Enlèvement Épave <span className='font-bold'>Gratuit dans toute la France</span>. Nous répondons à tous les appels de la localité , afin de vous débarrasser de vos VHU (Véhicule Hors Usage).Auto, moto, scooter, jet ski camping car caravane,bateaux utilitaire roulant et non roulant, accidenté...
         </p>
       </div>
