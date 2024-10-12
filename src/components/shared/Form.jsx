@@ -34,7 +34,7 @@ export default function ContactForm() {
           </div>
         </div>
 
-        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" className="w-full lg:w-2/3 grid gap-4 md:gap-6">
+        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you" className="w-full lg:w-2/3 grid gap-4 md:gap-6">
           {/* Hidden field for Netlify bot protection */}
           <input type="hidden" name="form-name" value="contact" />
           <p className="hidden">
