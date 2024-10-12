@@ -30,7 +30,7 @@ const Hero = () => {
       >
         Enlèvement <span className="bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text"> des épaves,</span>
         <br />
-        <span className='text-3xl md:text-4xl lg:text-5xl'>Gratuit sur toute l'Île-de-France</span>
+        <span className='text-3xl md:text-4xl lg:text-5xl'>Gratuit sur toute la France</span>
       </h1>
       <p
         ref={(el) => textRefs.current[1] = el}
