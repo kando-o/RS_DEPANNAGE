@@ -64,7 +64,7 @@ const Advantage = () => {
       icon: SiHomeadvisor,
       title: "SERVICE À DOMICILE",
       description:
-        "Nous intervenons partout en France et nous déplaçons directement à votre domicile pour l'enlèvement rapide et efficace de vos épaves.",
+        "Nous intervenons partout en France et nous nous déplaçons directement à votre domicile pour l'enlèvement rapide et efficace de vos épaves.",
     },
   ];
 

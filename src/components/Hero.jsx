@@ -28,7 +28,7 @@ const Hero = () => {
         ref={(el) => textRefs.current[0] = el}
         className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 md:mb-6"
       >
-        Enlèvement <span className="bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text"> des épaves,</span>
+        Enlèvement <span className="bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text"> d'épaves,</span>
         <br />
         <span className='text-3xl md:text-4xl lg:text-5xl'>Gratuit sur toute la France</span>
       </h1>
@@ -42,7 +42,7 @@ const Hero = () => {
         ref={(el) => textRefs.current[2] = el}
         className="text-base md:text-lg lg:text-xl text-gray-600 mb-6 md:mb-8 max-w-3xl mx-auto"
       >
-        Dans AutoXP on engage avec tous types du véhicule, Normal, Véhicule étranger, Véhicule gagé administrativement.
+        Dans AutoXP on s'engage avec tous types du véhicule, Normal, Véhicule étranger, Véhicule gagé administrativement.
       </p>
       <button
         ref={buttonRef}

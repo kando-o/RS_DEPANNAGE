@@ -7,16 +7,11 @@ import Loading from './components/shared/Loading/Loading';
 import { useState, useEffect } from 'react';
 
 function App() {
+
   const [loading, setLoading] = useState(true);
 
-  // Simulate loading delay for demonstration purposes
-  useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 2000); // Adjust delay as needed
-    return () => clearTimeout(timer); // Clean up the timer
-  }, []);
-
   if (loading) {
-    return <Loading />; // Render the Loading component while loading
+    return <Loading />; 
   }
 
   return (
