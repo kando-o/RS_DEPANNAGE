@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import { Phone, Mail, MapPin } from "lucide-react";
+import { useNavigate } from 'react-router-dom';
 
 export default function ContactForm() {
+
+  const navigate = useNavigate();
   const [emailError, setEmailError] = useState(''); 
 
 
@@ -29,6 +32,7 @@ export default function ContactForm() {
 
     setEmailError('');
     e.target.submit();
+    navigate('/message-recu');
   };
 
   return (
