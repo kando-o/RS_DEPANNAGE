@@ -28,7 +28,7 @@ function App() {
         />
         <meta name="author" content="AGISSAUTO" />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://yourwebsite.com" />
+        <link rel="canonical" href="https://agissauto.fr" />
         <meta name="geo.region" content="FR" />
         <meta name="geo.placename" content="Île-de-France" />
         <meta name="geo.position" content="48.8566;2.3522" />
@@ -41,8 +41,8 @@ function App() {
               "@type": "AutoService",
               "name": "AGISSAUTO - Enlèvement des épaves 100% Gratuit en France",
               "description": "AGISSAUTO offre un service d'enlèvement gratuit des épaves partout en France. Vendez votre véhicule avec facilité, rapidité et sécurité.",
-              "image": "https://yourwebsite.com/images/car-removal.jpg",
-              "url": "https://yourwebsite.com",
+              "image": "https://agissauto.fr/assets/pic2-B4MtFGv-.jpg",
+              "url": "https://agissauto.fr",
               "telephone": "+33622222018",
               "address": {
                 "@type": "PostalAddress",
