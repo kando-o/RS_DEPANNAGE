@@ -20,6 +20,9 @@ const Footer = () => {
             <p className="text-sm text-gray-400 mb-4">
               AGISSAUTO by AutoXP, Un service d'Enlèvement Épave Gratuit, disponible partout en France, pour vous débarrasser de vos VHU
             </p>
+            <p className="text-sm text-gray-400 mb-4">
+            Nous offrons des solutions de retrait de voiture rapides, professionnelles et gratuites, vous garantissant une tranquillité d'esprit avec un processus sans tracas et respectueux de l'environnement. Nos services sont disponibles 24/7 pour s'adapter à votre emploi du temps, avec tous les documents nécessaires pris en charge !
+            </p>
             <button className="bg-gradient-to-r from-blue-400 to-purple-500 hover:scale-105 text-white font-bold py-2 px-4 rounded transition" onClick={handleClick}>
               Contactez Nous
             </button>

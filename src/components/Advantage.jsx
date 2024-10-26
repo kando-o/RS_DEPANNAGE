@@ -50,7 +50,7 @@ const Advantage = () => {
     },
     {
       icon: FaCreditCard,
-      title: "Règlement Rapide par Virement Bancaire",
+      title: " en espèces ou virement bancaire instantanée",
       description:
         "Vous recevrez votre paiement par virement bancaire sous 48 à 72 heures ouvrées, dès que vous aurez accepté l'offre finale proposée par le professionnel après votre rendez-vous.",
     },

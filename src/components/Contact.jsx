@@ -36,7 +36,7 @@ const Contact = () => {
           Contactez Nous!
         </h2>
         <SwipeableButton
-          onSuccess={handleEmailSuccess}
+          onSuccess={(handleEmailSuccess)}
           text="Glisser pour contacter"
           startIcon={MdEmail}
           endIcon={FaCheck}

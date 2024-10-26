@@ -42,14 +42,23 @@ const Hero = () => {
         ref={(el) => textRefs.current[2] = el}
         className="text-base md:text-lg lg:text-xl text-gray-600 mb-6 md:mb-8 max-w-3xl mx-auto"
       >
-        Dans AutoXP on s'engage avec tous types du véhicule, Normal, Véhicule étranger, Véhicule gagé administrativement.
+        Autoxp s'engage à prendre en charge tous types de véhicules: normal, étranger, véhicules gagés et/ou accidentés.
       </p>
-      <button
-        ref={buttonRef}
-        className="bg-gray-900 text-white font-semibold py-2 px-5 md:py-3 md:px-6 rounded-full text-sm md:text-lg hover:bg-gray-800 transition-colors"
-      >
-        Get started free →
-      </button>
+      <div className='flex flex-col w-[20%] mx-auto gap-2'>
+        <button
+          ref={buttonRef}
+          className="bg-gray-900 text-white font-semibold py-2 px-5 md:py-3 md:px-6 rounded-full text-sm md:text-lg hover:bg-gray-800 transition-colors"
+        >
+          Get started free →
+        </button>
+        <button
+          ref={buttonRef}
+          className="bg-gray-900 text-white font-semibold py-2 px-5 md:py-3 md:px-6 rounded-full text-sm md:text-lg"
+          disabled
+        >
+          0622222018
+        </button>
+      </div>
     </div>
   );
 };
