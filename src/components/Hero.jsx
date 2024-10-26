@@ -42,18 +42,17 @@ const Hero = () => {
         ref={(el) => textRefs.current[2] = el}
         className="text-base md:text-lg lg:text-xl text-gray-600 mb-6 md:mb-8 max-w-3xl mx-auto"
       >
-        Autoxp s'engage à prendre en charge tous types de véhicules: normal, étranger, véhicules gagés et/ou accidentés.
+        Autoxp s'engage à prendre en charge tous types de véhicules: normal, étranger, véhicules gagés et/ou accidentés.
       </p>
-      <div className='flex flex-col w-[20%] mx-auto gap-2'>
+      <div className="flex flex-col w-[50%] md:w-[50%] lg:w-[30%] mx-auto gap-2">
         <button
           ref={buttonRef}
-          className="bg-gray-900 text-white font-semibold py-2 px-5 md:py-3 md:px-6 rounded-full text-sm md:text-lg hover:bg-gray-800 transition-colors"
+          className="bg-gray-900 text-white font-semibold py-2 px-5 sm:py-3 sm:px-6 rounded-full text-sm sm:text-base md:text-lg hover:bg-gray-800 transition-colors"
         >
           Get started free →
         </button>
         <button
-          ref={buttonRef}
-          className="bg-gray-900 text-white font-semibold py-2 px-5 md:py-3 md:px-6 rounded-full text-sm md:text-lg"
+          className="bg-gray-900 text-white font-semibold py-2 px-5 sm:py-3 sm:px-6 rounded-full text-sm sm:text-base md:text-lg"
           disabled
         >
           0622222018
