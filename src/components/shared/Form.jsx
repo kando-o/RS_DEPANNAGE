@@ -24,16 +24,16 @@ export default function ContactForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
-
+  
     if (!validateEmail(email)) {
-      setEmailError("Veuillez entrer une adresse e-mail valide."); // Set error message
+      setEmailError("Veuillez entrer une adresse e-mail valide.");
       return;
     }
-
+  
     setEmailError('');
-    e.target.submit();
     navigate('/message-recu');
   };
+  
 
   return (
     <section id="contact" className="py-12 px-20 max-w-7xl mx-auto">
@@ -68,7 +68,14 @@ export default function ContactForm() {
           </div>
         </div>
 
-        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" className="w-full lg:w-2/3 grid gap-4 md:gap-6" onSubmit={handleSubmit}>
+        <form
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          className="w-full lg:w-2/3 grid gap-4 md:gap-6"
+          onSubmit={handleSubmit}
+        >
           <input type="hidden" name="form-name" value="contact" />
           <p className="hidden">
             <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
