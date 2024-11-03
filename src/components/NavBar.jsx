@@ -99,7 +99,7 @@ const Navbar = () => {
                   className={`block py-2 px-3 rounded md:bg-transparent md:p-0 ${
                     item.current
                       ? 'text-black bg-zinc-00 md:dark:text-black'
-                      : 'text-white hover:bg-gray-100 md:hover:bg-transparent md:hover:text-gray-900 dark:text-zinc-600 dark:hover:bg-gray-700 dark:hover:text-black md:dark:hover:bg-transparent dark:border-gray-700'
+                      : 'text-zinc-500 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-gray-900 dark:text-zinc-600 dark:hover:bg-gray-700 dark:hover:text-black md:dark:hover:bg-transparent dark:border-gray-700'
                   }`}
                   aria-current={item.current ? 'page' : undefined}
                 >

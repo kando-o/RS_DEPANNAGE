@@ -53,7 +53,7 @@ const MainLayout = () => {
       <NavBar />
       <Hero />
       <div ref={addToRefs}><About /></div>
-      <div ref={addToRefs}><Advantage /></div>
+      <div id='advantage' ref={addToRefs}><Advantage /></div>
       <div ref={addToRefs}><AutoLogoSlider /></div>
       <div ref={addToRefs}><Contact /></div>
       <div ref={addToRefs}><Gallery /></div>

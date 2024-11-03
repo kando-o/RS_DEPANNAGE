@@ -10,6 +10,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Advantage = () => {
   const featureRefs = useRef([]);
+  const advantage = useRef(null);
 
   useEffect(() => {
     const animateFeatures = gsap.fromTo(
@@ -69,7 +70,7 @@ const Advantage = () => {
   ];
 
   return (
-    <div className='bg-white py-24 mt-24 md:mt-2 md:py-12 flex flex-col'>
+    <div ref={advantage} className='bg-white py-24 mt-24 md:mt-2 md:py-12 flex flex-col'>
       <div className='py-1 self-center px-4 rounded-full border border-pink-600 text-sm font-extralight text-pink-600'>
         Nos Avantages
       </div>

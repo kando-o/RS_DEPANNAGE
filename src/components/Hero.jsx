@@ -22,6 +22,17 @@ const Hero = () => {
     );
   }, []);
 
+  const handleClickEvent = () => {
+    const advantageElement = document.getElementById('advantage');
+    if (advantageElement) {
+      window.scrollTo({
+        top: advantageElement.offsetTop,
+        behavior: 'smooth'
+      });
+    }
+  };
+  
+
   return (
     <div ref={heroRef} className="bg-white text-center py-24 md:py-24 px-4">
       <h1
@@ -47,9 +58,10 @@ const Hero = () => {
       <div className="flex flex-col w-[50%] md:w-[50%] lg:w-[30%] mx-auto gap-2">
         <button
           ref={buttonRef}
+          onClick={handleClickEvent}
           className="bg-gray-900 text-white font-semibold py-2 px-5 sm:py-3 sm:px-6 rounded-full text-sm sm:text-base md:text-lg hover:bg-gray-800 transition-colors"
         >
-          Get started free →
+          En savoir plus ! →
         </button>
         <button
           className="bg-gray-900 text-white font-semibold py-2 px-5 sm:py-3 sm:px-6 rounded-full text-sm sm:text-base md:text-lg"
