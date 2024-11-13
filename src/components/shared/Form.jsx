@@ -7,6 +7,15 @@ export default function ContactForm() {
   const navigate = useNavigate();
   const [emailError, setEmailError] = useState(''); 
 
+  const [email, setEmail] = useState('');
+  const [name, setName] = useState('');
+  const [phone, setPhone] = useState('');
+  const [cp, setCp] = useState('');
+  const [message, setMessage] = useState('');
+
+
+ 
+
   // Function to prevent non-numeric input
   const handleKeyDown = (e) => {
     const allowedKeys = ['Backspace', 'Delete', 'ArrowLeft', 'ArrowRight', 'Tab'];
@@ -24,8 +33,13 @@ export default function ContactForm() {
   // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const formData = new FormData(e.target);
-    const email = e.target.email.value;
+    const formData = {
+      fullName: name,
+      email,
+      phone,
+      postCode: cp,
+      message
+    };
 
     // Email validation
     if (!validateEmail(email)) {
@@ -35,12 +49,21 @@ export default function ContactForm() {
 
     setEmailError('');
 
+    console.log('Form data:', formData);
+    
+    const endpoint = import.meta.env.VITE_CONTACT_ENDPOINT;
+    const token = import.meta.env.VITE_ANON_KEY;
+
+
     // Manually submit form data to Netlify
     try {
-      await fetch("/", {
+      await fetch(endpoint, {
         method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(formData).toString(),
+        headers: { 
+          "Content-Type": "application/x-www-form-urlencoded",
+          "Authorization": `Bearer ${token}`
+        },
+        body: JSON.stringify(formData),
       });
       navigate('/message-recu');
     } catch (error) {
@@ -88,9 +111,7 @@ export default function ContactForm() {
         {/* Contact Form */}
         <form
           name="contact"
-          method="POST"
-          data-netlify="true"
-          netlify-honeypot="bot-field"
+         
           className="w-full lg:w-2/3 grid gap-4 md:gap-6"
           onSubmit={handleSubmit}
         >
@@ -104,6 +125,7 @@ export default function ContactForm() {
               <input
                 type="text"
                 name="name"
+                onChange={(e) => setName(e.target.value)}
                 placeholder="Nom et Prénom"
                 className="w-full px-3 py-2 md:px-4 md:py-3 bg-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 text-sm md:text-base"
                 required
@@ -114,6 +136,7 @@ export default function ContactForm() {
               <input
                 type="email"
                 name="email"
+                onChange={(e) => setEmail(e.target.value)}
                 placeholder="Email"
                 className={`w-full px-3 py-2 md:px-4 md:py-3 bg-gray-100 rounded-md focus:outline-none focus:ring-2 ${emailError ? 'focus:ring-red-500' : 'focus:ring-indigo-500'} text-sm md:text-base`}
                 required
@@ -126,6 +149,7 @@ export default function ContactForm() {
               type="tel"
               name="project"
               placeholder="Téléphone"
+              onChange={(e) => setPhone(e.target.value)}
               className="w-full px-3 py-2 md:px-4 md:py-3 bg-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 text-sm md:text-base"
               required
               pattern="[0-9]{10}"
@@ -138,6 +162,7 @@ export default function ContactForm() {
             <input
               type="text"
               name="cp"
+              onChange={(e) => setCp(e.target.value)}
               placeholder="Code Postal"
               className="w-full px-3 py-2 md:px-4 md:py-3 bg-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 text-sm md:text-base"
               required
@@ -150,6 +175,7 @@ export default function ContactForm() {
             <textarea
               name="message"
               placeholder="Message"
+              onChange={(e) => setMessage(e.target.value)}
               rows="4"
               className="w-full px-3 py-2 md:px-4 md:py-3 bg-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 text-sm md:text-base"
               required
