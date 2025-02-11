@@ -27,7 +27,8 @@ const About = () => {
         <img 
           src={aboutImage} 
           alt="about us" 
-          className='w-full h-full object-cover about-image' 
+          className='w-full h-full object-cover about-image'
+		  		loading="lazy"
         />
       </div>
       <div className='absolute inset-0 flex flex-col justify-start items-center p-6'>
