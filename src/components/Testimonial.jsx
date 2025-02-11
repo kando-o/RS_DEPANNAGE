@@ -113,10 +113,11 @@ const Testimonial = () => {
               >
                 <div className="flex items-center mb-4">
                   <img
-                    src={testimonial.img}
-                    alt={testimonial.name}
-                    className="w-14 h-14 rounded-full mr-4"
-                  />
+										src={testimonial.img}
+										alt={testimonial.name}
+										className="w-14 h-14 rounded-full mr-4"
+										loading="lazy"	
+									/>
                   <div>
                     <h3 className="text-xl font-semibold text-gray-800 mb-1">
                       {testimonial.name}
