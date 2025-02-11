@@ -47,6 +47,7 @@ const ImageSlider = ({
               alt={`Slide ${index + 1}`}
               className="w-full h-full"
               style={{ objectFit }}
+			  			loading="lazy"
             />
           </div>
         ))}
