@@ -3,9 +3,10 @@ import franceFlag from '../assets/images/france.png'
 
 const Footer = () => {
 
-    const handleClick = () => {
-        window.location.href = "mailto:support@autoxp.fr";
-    }
+	const handleClick = () => {
+			window.location.href = "mailto:support@autoxp.fr";
+	}
+
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -41,12 +42,18 @@ const Footer = () => {
               ))}
             </ul>
           </div>
+	
           <div>
             <h3 className="text-lg font-semibold mb-4">Secteurs d'Intervention</h3>
             <ul className="grid grid-cols-1 gap-2 mb-2">
               Notre Intervention n'a pas de limite, on intervient sur toute la France.
             </ul>
-            <img src={franceFlag} alt="Flag" width={90}/>
+            <img 
+							src={franceFlag} 
+							alt="Flag" 
+							width={90}
+							loading="lazy"
+						/>
           </div>
         </div>
 
