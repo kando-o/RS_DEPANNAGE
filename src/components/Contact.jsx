@@ -28,7 +28,7 @@ const Contact = () => {
         </h2>
         <SwipeableButton
           onSuccess={handlePhoneSuccess}
-          text="0622222018"
+          text="06 22 22 20 18"
           startIcon={FaPhoneAlt}
           endIcon={FaCheck}
         />

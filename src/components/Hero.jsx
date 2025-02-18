@@ -67,7 +67,7 @@ const Hero = () => {
           className="bg-gray-900 text-white font-semibold py-2 px-5 sm:py-3 sm:px-6 rounded-full text-sm sm:text-base md:text-lg"
           disabled
         >
-          0622222018
+          06 22 22 20 18
         </button>
       </div>
     </div>

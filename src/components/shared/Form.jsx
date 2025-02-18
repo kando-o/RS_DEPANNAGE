@@ -87,7 +87,7 @@ export default function ContactForm() {
             <Phone className="text-indigo-600 w-5 h-5 md:w-6 md:h-6 mr-3 md:mr-4 flex-shrink-0" />
             <div>
               <h3 className="text-lg md:text-xl font-medium">Call Us</h3>
-              <a href="tel:+213776677887" className="text-sm md:text-base text-gray-600">062 22 22 018</a>
+              <a href="tel:+213776677887" className="text-sm md:text-base text-gray-600">06 22 22 20 18</a>
             </div>
           </div>
 
