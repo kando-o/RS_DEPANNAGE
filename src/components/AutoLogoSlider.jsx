@@ -4,17 +4,26 @@ import { Autoplay, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/autoplay';
 import 'swiper/css/pagination';
+import volkswagen from "../assets/images/volkswagen.png"
+import bMW from "../assets/images/bmw.png"
+import mercedesBenz from "../assets/images/mercedes.png"
+import audi from "../assets/images/audi.png"
+import renault from "../assets/images/renault.png"
+import peugeot from "../assets/images/peugeot.png"
+import citro from "../assets/images/citro.png"
+import fiat from "../assets/images/fiat.png"
+import volvo from "../assets/images/volvo.png"
 
 const carLogos = [
-  { name: 'Volkswagen', url: 'src/assets/images/volkswagen.png' },
-  { name: 'BMW', url: 'src/assets/images/bmw.png' },
-  { name: 'Mercedes-Benz', url: 'src/assets/images/mercedes.png' },
-  { name: 'Audi', url: 'src/assets/images/audi.png' },
-  { name: 'Renault', url: 'src/assets/images/renault.png' },
-  { name: 'Peugeot', url: 'src/assets/images/peugeot.png' },
-  { name: 'Citroën', url: 'src/assets/images/citro.png' },
-  { name: 'Fiat', url: 'src/assets/images/fiat.png' },
-  { name: 'Volvo', url: 'src/assets/images/volvo.png' },
+  { name: 'Volkswagen', url: volkswagen  },
+  { name: 'BMW', url: bMW },
+  { name: 'Mercedes-Benz', url: mercedesBenz },
+  { name: 'Audi', url: audi },
+  { name: 'Renault', url: renault },
+  { name: 'Peugeot', url: peugeot },
+  { name: 'Citroën', url: citro },
+  { name: 'Fiat', url: fiat },
+  { name: 'Volvo', url: volvo },
 ];
 
 const AutoLogoSlider = () => {
