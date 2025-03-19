@@ -22,31 +22,31 @@ export default function NotFound404() {
 		<>
 		<HelmetProvider>
 			<Helmet>
-							<title>Page non trouvée | AGISSAUTO</title>
+							<title>Page non trouvée | EPAVEAUTOMOBILE</title>
 							<meta name="robots" content="noindex, follow" />
 							<meta name="description" content="La page que vous recherchez n'existe pas ou a été déplacée. Retournez à l'accueil pour continuer votre navigation." />
 
 							{/* Open Graph (Facebook, WhatsApp) */}
 	
-							<meta property="og:title" content="Page non trouvée | AGISSAUTO" />
+							<meta property="og:title" content="Page non trouvée | EPAVEAUTOMOBILE" />
 							<meta property="og:description" content="Oops! La page que vous cherchez n'existe pas. Retournez à l'accueil." />
-							<meta property="og:image" content="https://agissauto.fr/assets/404.PNG" />
+							<meta property="og:image" content="https://epaveautomobile.fr/assets/404.PNG" />
 							<meta property="og:type" content="website" />
-							<meta property="og:url" content="https://agissauto.fr/404" />
+							<meta property="og:url" content="https://epaveautomobile.fr/404" />
 
 							{/* Twitter Cards */}
 	
 							<meta name="twitter:card" content="summary_large_image" />
-							<meta name="twitter:title" content="Page non trouvée | AGISSAUTO" />
+							<meta name="twitter:title" content="Page non trouvée | EPAVEAUTOMOBILE" />
 							<meta name="twitter:description" content="Oops! La page que vous cherchez n'existe pas. Retournez à l'accueil." />
-							<meta name="twitter:image" content="https://agissauto.fr/assets/404.PNG" />
+							<meta name="twitter:image" content="https://epaveautomobile.fr/assets/404.PNG" />
 			</Helmet>
 		</HelmetProvider>
 
 			<nav ref={navbarRef} className="bg-white bg-opacity-20 backdrop-blur-lg dark:bg-white/10 fixed w-full z-20 top-0 start-0">
 				<div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
 					<NavLink to="/" className="flex items-center space-x-3 text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text rtl:space-x-reverse transform hover:scale-105 transition duration-300">
-						AGISSAUTO
+						EPAVEAUTOMOBILE
 					</NavLink>
 				</div>
 			</nav>

@@ -29,37 +29,37 @@ export default function ThankYou() {
 	  /* Helmet pour les métadonnées */
     <HelmetProvider>
       <Helmet>
-				<title>Merci pour votre message | AGISSAUTO - Épaviste agréé</title>
+				<title>Merci pour votre message | EPAVEAUTOMOBILE - Épaviste agréé</title>
 				<meta
 					name="description"
-					content="Nous avons bien reçu votre message ! Notre équipe vous contactera sous peu. AGISSAUTO, expert en enlèvement gratuit d'épaves en Île-de-France et partout en France." 
+					content="Nous avons bien reçu votre message ! Notre équipe vous contactera sous peu. EPAVEAUTOMOBILE, expert en enlèvement gratuit d'épaves en Île-de-France et partout en France." 
 					/>
 
 					<meta 
 					name="keywords" 
-					content="confirmation message, contact AGISSAUTO, épaviste, enlèvement épaves, épaviste agréé, service auto, dépannage voiture, récupération véhicule" 
+					content="confirmation message, contact EPAVEAUTOMOBILE, épaviste, enlèvement épaves, épaviste agréé, service auto, dépannage voiture, récupération véhicule" 
 				/>
 
-				<meta name="author" content="AGISSAUTO" />
+				<meta name="author" content="EPAVEAUTOMOBILE" />
 				<meta name="robots" content="noindex, follow" />
 
-				<link rel="canonical" href="https://agissauto.fr/message-recu" />
+				<link rel="canonical" href="https://epaveautomobile.fr/message-recu" />
 
 				{/* Open Graph (Facebook, WhatsApp) */}
 
-				<meta property="og:title" content="Merci pour votre message | AGISSAUTO - Épaviste agréé" />
+				<meta property="og:title" content="Merci pour votre message | EPAVEAUTOMOBILE - Épaviste agréé" />
 				<meta property="og:description" content="Nous avons bien reçu votre message ! Notre équipe vous répondra rapidement. Besoin d'un enlèvement d'épave ? Contactez-nous !" />
 				<meta property="og:type" content="website" />
-				<meta property="og:url" content="https://agissauto.fr/message-recu" />
-				<meta property="og:image:alt" content="https://agissauto.fr/assets/pic3-D21_GbCp.jpg" />
-				<meta property="og:site_name" content="AGISSAUTO" />
+				<meta property="og:url" content="https://epaveautomobile.fr/message-recu" />
+				<meta property="og:image:alt" content="https://epaveautomobile.fr/assets/pic3-D21_GbCp.jpg" />
+				<meta property="og:site_name" content="EPAVEAUTOMOBILE" />
 
 				{/* Twitter Cards */}
 
 				<meta name="twitter:card" content="summary_large_image" loading="lazy" />
-				<meta name="twitter:title" content="Merci pour votre message | AGISSAUTO - Épaviste agréé" />
+				<meta name="twitter:title" content="Merci pour votre message | EPAVEAUTOMOBILE - Épaviste agréé" />
 				<meta name="twitter:description" content="Nous avons bien reçu votre message et vous répondrons rapidement. Enlèvement d'épaves gratuit en Île-de-France et dans toute la France !" />
-				<meta name="twitter:image:alt" content="https://agissauto.fr/assets/pic3-D21_GbCp.jpg" />
+				<meta name="twitter:image:alt" content="https://epaveautomobile.fr/assets/pic3-D21_GbCp.jpg" />
 
 				{/* Données structurées (Schema.org) */}
 
@@ -68,17 +68,17 @@ export default function ThankYou() {
 						{
 							"@context": "https://schema.org",
 							"@type": "WebPage",
-							"name": "Merci pour votre message | AGISSAUTO - Épaviste agréé",
+							"name": "Merci pour votre message | EPAVEAUTOMOBILE - Épaviste agréé",
 							"description": "Nous avons bien reçu votre message ! Notre équipe vous contactera sous peu. Besoin d'un enlèvement d'épave ? Contactez-nous.",
-							"url": "https://agissauto.fr/message-recu",
-							"image": "https://agissauto.fr/assets/pic3-D21_GbCp.jpg",
+							"url": "https://epaveautomobile.fr/message-recu",
+							"image": "https://epaveautomobile.fr/assets/pic3-D21_GbCp.jpg",
 							"publisher": {
 								"@type": "Organization",
-								"name": "AGISSAUTO",
-								"url": "https://agissauto.fr",
+								"name": "EPAVEAUTOMOBILE",
+								"url": "https://epaveautomobile.fr",
 								"logo": {
 									"@type": "ImageObject",
-									"url": "https://agissauto.fr/assets/logo.png"
+									"url": "https://epaveautomobile.fr/assets/logo.png"
 								}
 							}
 						}
@@ -89,7 +89,7 @@ export default function ThankYou() {
       <nav ref={navbarRef} className="bg-white bg-opacity-20 backdrop-blur-lg dark:bg-white/10 fixed w-full z-20 top-0 start-0">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <NavLink to="/" className="flex items-center space-x-3 text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text rtl:space-x-reverse transform hover:scale-105 transition duration-300">
-            AGISSAUTO
+            EPAVEAUTOMOBILE
           </NavLink>
         </div>
       </nav>

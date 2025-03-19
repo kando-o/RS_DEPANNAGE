@@ -10,7 +10,7 @@ import { useState, useEffect } from 'react';
 function App() {
 
 	const [loading, setLoading] = useState(false);
-	const metaImage = "https://agissauto.fr/assets/pic2-B4MtFGv-.jpg";
+	const metaImage = "https://epaveautomobile.fr/assets/pic2-B4MtFGv-.jpg";
 
 	if (loading) {
 		return <Loading />; 
@@ -19,35 +19,35 @@ function App() {
 	return (
 		<HelmetProvider>
 			<Helmet>
-				<title>Enlèvement Gratuit et Rapide d'épaves de véhicules 95 - AGISSAUTO en Île-de-France et partout en France</title>
+				<title>Enlèvement Gratuit et Rapide d'épaves de véhicules 95 - EPAVEAUTOMOBILE en Île-de-France et partout en France</title>
 				<meta
 					name="description"
-					content="Besoin d'un enlèvement d'épave rapide et gratuit dans le 95 ? AGISSAUTO intervient 7j/7 en Île-de-France et partout en France. Contactez-nous !" 
+					content="Besoin d'un enlèvement d'épave rapide et gratuit dans le 95 ? EPAVEAUTOMOBILE intervient 7j/7 en Île-de-France et partout en France. Contactez-nous !" 
 				/>
 				<meta
 					name="keywords"
-					content="enlèvement épaves, enlèvement d'épave 95, voiture épave, enlèvement gratuit, enlèvement épaves gratuit, île-de-france, dépannage voiture, récupération véhicule, épaviste agréé, enlèvement épave Paris, vente voiture épave"
+					content="enlèvement épaves, enlèvement d'épave 95, camping car, enlèvement gratuit, enlèvement épaves gratuit, utilitaire, bateau, récupération véhicule, épaviste agréé, enlèvement épave Paris, vente voiture épave"
 				/>
-				<meta name="author" content="AGISSAUTO" />
+				<meta name="author" content="EPAVEAUTOMOBILE" />
 				<meta name="robots" content="index, follow" />
-				<link rel="canonical" href="https://agissauto.fr" />
+				<link rel="canonical" href="https://epaveautomobile.fr" />
 
 				{/*  Balises Open Graph (Facebook, Whatsapp) */}
 
-				<meta property="og:site_name" content="AGISSAUTO" />
+				<meta property="og:site_name" content="EPAVEAUTOMOBILE" />
 				<meta property="og:locale" content="fr_FR" />
-				<meta property="og:title" content="Enlèvement Gratuit et Rapide d'Épaves 95 - AGISSAUTO Service rapide & gratuit en Île-de-France" />
-				<meta property="og:description" content="Service d'enlèvement gratuit et rapide des épaves en Île-de-France et partout en France. Contactez AGISSAUTO pour un service fiable et professionnel." />
+				<meta property="og:title" content="Enlèvement Gratuit et Rapide d'Épaves 95 - EPAVEAUTOMOBILE Service rapide & gratuit en Île-de-France" />
+				<meta property="og:description" content="Service d'enlèvement gratuit et rapide des épaves en Île-de-France et partout en France. Contactez EPAVEAUTOMOBILE pour un service fiable et professionnel." />
 				<meta property="og:image" content={metaImage} />
-				<meta property="og:image:alt" content="AGISSAUTO - Enlèvement gratuit d'épaves en Île-de-France" />
-				<meta property="og:url" content="https://agissauto.fr" />
+				<meta property="og:image:alt" content="EPAVEAUTOMOBILE - Enlèvement gratuit d'épaves en Île-de-France" />
+				<meta property="og:url" content="https://epaveautomobile.fr" />
 				<meta property="og:type" content="website" />
 
 				{/* Balises Twitter Cards */}
 
 				<meta name="twitter:card" content="summary_large_image" />
-				<meta name="twitter:title" content="AGISSAUTO - Service d'Enlèvement des Épaves Gratuit" />
-				<meta name="twitter:description" content="Enlèvement gratuit des épaves en France. Fiabilité, rapidité et professionnalisme avec AGISSAUTO." />
+				<meta name="twitter:title" content="EPAVEAUTOMOBILE - Service d'Enlèvement des Épaves Gratuit" />
+				<meta name="twitter:description" content="Enlèvement gratuit des épaves en France. Fiabilité, rapidité et professionnalisme avec EPAVEAUTOMOBILE." />
 				<meta name="twitter:image" content={metaImage} />
 				<meta name="twitter:image:alt" content="Service rapide et gratuit pour l'enlèvement des épaves" />
 
@@ -60,10 +60,10 @@ function App() {
 						{
 						"@context": "https://schema.org",
 						"@type": "AutoService",
-						"name": "AGISSAUTO - Enlèvement des épaves 100% Gratuit en France",
-						"description": "AGISSAUTO offre un service d'enlèvement gratuit des épaves partout en France. Vendez votre véhicule avec facilité, rapidité et sécurité.",
-						"image": "https://agissauto.fr/assets/pic2-B4MtFGv-.jpg",
-						"url": "https://agissauto.fr",
+						"name": "EPAVEAUTOMOBILE - Enlèvement des épaves 100% Gratuit en France",
+						"description": "EPAVEAUTOMOBILE offre un service d'enlèvement gratuit des épaves partout en France. Vendez votre véhicule avec facilité, rapidité et sécurité.",
+						"image": "https://epaveautomobile.fr/assets/pic2-B4MtFGv-.jpg",
+						"url": "https://epaveautomobile.fr",
 						"telephone": "+33622222018",
 						"address": {
 							"@type": "PostalAddress",
