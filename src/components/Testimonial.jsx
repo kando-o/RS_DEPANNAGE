@@ -82,7 +82,7 @@ const Testimonial = () => {
           Ce que nos clients disent de nous !
         </h2>
         <p className="text-gray-600 text-center text-sm md:text-lg  mb-8">
-          Ce que pensent notre chers clientel de EPAVEAUTOMOBILE !
+          Ce que pensent notre chers clientel de EPAVE AUTOMOBILE !
         </p>
 
         <Swiper

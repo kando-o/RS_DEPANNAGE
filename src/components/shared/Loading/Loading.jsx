@@ -4,7 +4,7 @@ import './Loading.css';
 const Loading = () => {
   return (
     <div className="loading-container">
-      <h1 className="loading-text">EPAVEAUTOMOBILE</h1>
+      <h1 className="loading-text">EPAVE AUTOMOBILE</h1>
     </div>
   );
 };
