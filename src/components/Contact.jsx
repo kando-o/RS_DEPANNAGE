@@ -10,7 +10,7 @@ const Contact = () => {
       };
     
       const handleEmailSuccess = () => {
-        window.location.href = "mailto:support@autoxp.fr";
+        window.location.href = "mailto:epaveautomobile95@gmail.com";
       };
 
   return (
