@@ -10,7 +10,7 @@ const Contact = () => {
       };
     
       const handleEmailSuccess = () => {
-        window.location.href = "mailto:epaveautomobile95@gmail.com";
+        window.location.href = "mailto:kando.jason@live.fr";
       };
 
   return (
