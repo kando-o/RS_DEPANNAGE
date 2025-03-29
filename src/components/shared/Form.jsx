@@ -31,45 +31,51 @@ export default function ContactForm() {
   };
 
   // Handle form submission
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const formData = {
-      fullName: name,
-      email,
-      phone,
-      postCode: cp,
-      message
-    };
-
-    // Email validation
-    if (!validateEmail(email)) {
-      setEmailError("Veuillez entrer une adresse e-mail valide.");
-      return;
-    }
-
-    setEmailError('');
-
-    console.log('Form data:', formData);
-    
-    const endpoint = import.meta.env.VITE_CONTACT_ENDPOINT;
-    const token = import.meta.env.VITE_ANON_KEY;
-
-
-    // Manually submit form data to Netlify
-    try {
-      await fetch(endpoint, {
-        method: "POST",
-        headers: { 
-          "Content-Type": "application/x-www-form-urlencoded",
-          "Authorization": `Bearer ${token}`
-        },
-        body: JSON.stringify(formData),
-      });
-      navigate('/message-recu');
-    } catch (error) {
-      console.error("Form submission error:", error);
-    }
-  };
+	const handleSubmit = async (e) => {
+		e.preventDefault();
+	
+		const formData = {
+			name,        // Nom complet
+			email,       // Adresse email de l'utilisateur
+			phone,       // Numéro de téléphone
+			postCode: cp,// Code postal
+			message      // Message envoyé
+		};
+	
+		// Vérification de l'email
+		if (!validateEmail(email)) {
+			setEmailError("Veuillez entrer une adresse e-mail valide.");
+			return;
+		}
+	
+		setEmailError('');
+	
+		console.log('Form data:', formData);
+	
+		// Endpoint de la fonction serverless Netlify
+		const endpoint = "/.netlify/functions/send-email";
+	
+		try {
+			const response = await fetch(endpoint, {
+				method: "POST",
+				headers: { 
+					"Content-Type": "application/json"
+				},
+				body: JSON.stringify(formData),
+			});
+	
+			const data = await response.json();
+	
+			if (data.success) {
+				navigate('/message-recu');
+			} else {
+				console.error("Erreur lors de l'envoi :", data.error);
+			}
+		} catch (error) {
+			console.error("Erreur lors de la soumission du formulaire :", error);
+		}
+	};
+	
   
   return (
     <section id="contact" className="py-12 px-20 max-w-7xl mx-auto">
