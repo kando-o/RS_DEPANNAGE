@@ -4,7 +4,7 @@ import franceFlag from '../assets/images/france.png'
 const Footer = () => {
 
 	const handleClick = () => {
-			window.location.href = "mailto:kando.jason@live.fr";
+			window.location.href = "mailto:autoxp@epaveautomobile.fr";
 	}
 
   return (

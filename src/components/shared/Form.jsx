@@ -95,7 +95,7 @@ export default function ContactForm() {
             <Mail className="text-indigo-600 w-5 h-5 md:w-6 md:h-6 mr-3 md:mr-4 flex-shrink-0" />
             <div>
               <h3 className="text-lg md:text-xl font-medium">Email</h3>
-              <a href="mailto:kando.jason@live.fr" className="text-sm md:text-base text-gray-600">kando.jason@live.fr</a>
+              <a href="mailto:autoxp@epaveautomobile.fr" className="text-sm md:text-base text-gray-600">autoxp@epaveautomobile.fr</a>
             </div>
           </div>
 
