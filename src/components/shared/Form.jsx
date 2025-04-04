@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { Phone, Mail, MapPin } from "lucide-react";
 import { useNavigate } from 'react-router-dom';
+import emailjs from 'emailjs-com'
 
 export default function ContactForm() {
-
   const navigate = useNavigate();
-  const [emailError, setEmailError] = useState(''); 
+  const [emailError, setEmailError] = useState('');
 
   const [email, setEmail] = useState('');
   const [name, setName] = useState('');
@@ -13,10 +13,6 @@ export default function ContactForm() {
   const [cp, setCp] = useState('');
   const [message, setMessage] = useState('');
 
-
- 
-
-  // Function to prevent non-numeric input
   const handleKeyDown = (e) => {
     const allowedKeys = ['Backspace', 'Delete', 'ArrowLeft', 'ArrowRight', 'Tab'];
     if (!/[0-9]/.test(e.key) && !allowedKeys.includes(e.key)) {
@@ -24,59 +20,44 @@ export default function ContactForm() {
     }
   };
 
-  // Function to validate email format
   const validateEmail = (email) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
   };
 
-  // Handle form submission
-	const handleSubmit = async (e) => {
-		e.preventDefault();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const formData = {
+      name,
+      email,
+      phone,
+      zipcode: cp,
+      message
+    };
+
+    if (!validateEmail(email)) {
+      setEmailError("Veuillez entrer une adresse e-mail valide.");
+      return;
+    }
+
+    setEmailError('');
+
+    const serviceid = "service_3tcsdbp" // Email service ID
+    const templateid = "template_4y2fnf9" // Template ID
+    const userid = "ZPRPisl7Oq0Ge9GyR" // Clé publique EmailJS
 	
-		const formData = {
-			name,        // Nom complet
-			email,       // Adresse email de l'utilisateur
-			phone,       // Numéro de téléphone
-			postCode: cp,// Code postal
-			message      // Message envoyé
-		};
-	
-		// Vérification de l'email
-		if (!validateEmail(email)) {
-			setEmailError("Veuillez entrer une adresse e-mail valide.");
-			return;
-		}
-	
-		setEmailError('');
-	
-		console.log('Form data:', formData);
-	
-		// Endpoint de la fonction serverless Netlify
-		const endpoint = "/.netlify/functions/send-email";
-	
-		try {
-			const response = await fetch(endpoint, {
-				method: "POST",
-				headers: { 
-					"Content-Type": "application/json"
-				},
-				body: JSON.stringify(formData),
-			});
-	
-			const data = await response.json();
-	
-			if (data.success) {
-				navigate('/message-recu');
-			} else {
-				console.error("Erreur lors de l'envoi :", data.error);
-			}
-		} catch (error) {
-			console.error("Erreur lors de la soumission du formulaire :", error);
-		}
-	};
-	
-  
+		emailjs
+		.send(serviceid, templateid, formData, userid)
+		.then((result) => {
+			console.log('Email envoyé avec succès:', result.text);
+			navigate('/message-recu');
+		})
+		.catch((error) => {
+			console.error('Erreur lors de l\'envoi de l\'email:', error.text);
+		});
+  };
+
   return (
     <section id="contact" className="py-12 px-20 max-w-7xl mx-auto">
       <h2 className="text-2xl md:text-4xl bg-gradient-to-r from-purple-600 to-orange-400 text-transparent bg-clip-text font-bold mb-2 text-center">
@@ -87,7 +68,6 @@ export default function ContactForm() {
       </p>
 
       <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
-        {/* Contact Information */}
         <div className="w-full lg:w-1/3 space-y-6 md:space-y-8">
           <div className="flex items-center">
             <Phone className="text-indigo-600 w-5 h-5 md:w-6 md:h-6 mr-3 md:mr-4 flex-shrink-0" />
@@ -114,10 +94,8 @@ export default function ContactForm() {
           </div>
         </div>
 
-        {/* Contact Form */}
         <form
           name="contact"
-         
           className="w-full lg:w-2/3 grid gap-4 md:gap-6"
           onSubmit={handleSubmit}
         >
