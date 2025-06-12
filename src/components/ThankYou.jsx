@@ -29,18 +29,18 @@ export default function ThankYou() {
 	  /* Helmet pour les métadonnées */
     <HelmetProvider>
       <Helmet>
-				<title>Merci pour votre message | EPAVE AUTOMOBILE - Épaviste agréé</title>
+				<title>Merci pour votre message | RS DEPANNAGE - Épaviste agréé</title>
 				<meta
 					name="description"
-					content="Nous avons bien reçu votre message ! Notre équipe vous contactera sous peu. EPAVE AUTOMOBILE, expert en enlèvement gratuit d'épaves en Île-de-France et partout en France." 
+					content="Nous avons bien reçu votre message ! Notre équipe vous contactera sous peu. RS DEPANNAGE, expert en enlèvement gratuit d'épaves en Île-de-France et partout en France." 
 					/>
 
 					<meta 
 					name="keywords" 
-					content="confirmation message, contact EPAVE AUTOMOBILE, épaviste, enlèvement épaves, épaviste agréé, service auto, dépannage voiture, récupération véhicule" 
+					content="confirmation message, contact RS DEPANNAGE, épaviste, enlèvement épaves, épaviste agréé, service auto, dépannage voiture, récupération véhicule" 
 				/>
 
-				<meta name="author" content="EPAVE AUTOMOBILE" />
+				<meta name="author" content="RS DEPANNAGE" />
 				<meta name="robots" content="noindex, follow" />
 
 				<link rel="canonical" href="https://epaveautomobile.fr/message-recu" />
@@ -89,7 +89,7 @@ export default function ThankYou() {
       <nav ref={navbarRef} className="bg-white bg-opacity-20 backdrop-blur-lg dark:bg-white/10 fixed w-full z-20 top-0 start-0">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <NavLink to="/" className="flex items-center space-x-3 text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text rtl:space-x-reverse transform hover:scale-105 transition duration-300">
-            EPAVE AUTOMOBILE
+            RS DEPANNAGE
           </NavLink>
         </div>
       </nav>

@@ -10,7 +10,7 @@ const Contact = () => {
       };
     
       const handleEmailSuccess = () => {
-        window.location.href = "mailto:autoxp@epaveautomobile.fr";
+        window.location.href = "mailto:RSDEPANNGE@epaveautomobile.fr"; // à changer
       };
 
   return (
@@ -28,7 +28,7 @@ const Contact = () => {
         </h2>
         <SwipeableButton
           onSuccess={handlePhoneSuccess}
-          text="06 22 22 20 18"
+          text="06 51 60 58 83"
           startIcon={FaPhoneAlt}
           endIcon={FaCheck}
         />

@@ -22,7 +22,7 @@ export default function NotFound404() {
 		<>
 		<HelmetProvider>
 			<Helmet>
-							<title>Page non trouvée | EPAVE AUTOMOBILE</title>
+							<title>Page non trouvée | RS DEPANNAGE</title>
 							<meta name="robots" content="noindex, follow" />
 							<meta name="description" content="La page que vous recherchez n'existe pas ou a été déplacée. Retournez à l'accueil pour continuer votre navigation." />
 
@@ -46,7 +46,7 @@ export default function NotFound404() {
 			<nav ref={navbarRef} className="bg-white bg-opacity-20 backdrop-blur-lg dark:bg-white/10 fixed w-full z-20 top-0 start-0">
 				<div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
 					<NavLink to="/" className="flex items-center space-x-3 text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text rtl:space-x-reverse transform hover:scale-105 transition duration-300">
-						EPAVE AUTOMOBILE
+						RS DEPANNAGE
 					</NavLink>
 				</div>
 			</nav>

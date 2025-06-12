@@ -47,13 +47,13 @@ const Hero = () => {
         ref={(el) => textRefs.current[1] = el}
         className="text-base md:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto mt-4 md:mt-6"
       >
-        Vendre sa voiture avec <span className='font-bold'>EPAVE AUTOMOBILE</span>, c'est facile, rapide & sûr!
+        Vendre sa voiture avec <span className='font-bold'>RS DEPANNAGE</span>, c'est facile, rapide & sûr!
       </p>
       <p
         ref={(el) => textRefs.current[2] = el}
         className="text-base md:text-lg lg:text-xl text-gray-600 mb-6 md:mb-8 max-w-3xl mx-auto"
       >
-        Autoxp s'engage à prendre en charge tous types de véhicules: normal, étranger, véhicules gagés et/ou accidentés.
+        RD DEPANNAGE s'engage à prendre en charge tous types de véhicules: normal, étranger, véhicules gagés et/ou accidentés.
       </p>
       <div className="flex flex-col w-[50%] md:w-[50%] lg:w-[30%] mx-auto gap-2">
         <button
@@ -67,7 +67,7 @@ const Hero = () => {
           className="bg-gray-900 text-white font-semibold py-2 px-5 sm:py-3 sm:px-6 rounded-full text-sm sm:text-base md:text-lg"
           disabled
         >
-          06 22 22 20 18
+          06 51 60 58 83
         </button>
       </div>
     </div>

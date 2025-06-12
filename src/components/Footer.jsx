@@ -4,7 +4,7 @@ import franceFlag from '../assets/images/france.png'
 const Footer = () => {
 
 	const handleClick = () => {
-			window.location.href = "mailto:autoxp@epaveautomobile.fr";
+			window.location.href = "mailto:RSDEPANNAGE@XXX.fr";
 	}
 
   return (
@@ -15,11 +15,11 @@ const Footer = () => {
           <div>
             <h2 className="text-2xl font-bold mb-4">
               <span className="bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">
-                EPAVE AUTOMOBILE
+                RS DEPANNAGE
               </span>
             </h2>
             <p className="text-sm text-gray-400 mb-4">
-              EPAVE AUTOMOBILE by AutoXP, Un service d'Enlèvement Épave Gratuit, disponible partout en France, pour vous débarrasser de vos VHU
+              RS DEPANNAGE, Un service d'Enlèvement Épave Gratuit, disponible partout en France, pour vous débarrasser de vos VHU
             </p>
             <p className="text-sm text-gray-400 mb-4">
             Nous offrons des solutions de retrait de voiture rapides, professionnelles et gratuites, vous garantissant une tranquillité d'esprit avec un processus sans tracas et respectueux de l'environnement. Nos services sont disponibles 24/7 pour s'adapter à votre emploi du temps, avec tous les documents nécessaires pris en charge !
@@ -59,7 +59,7 @@ const Footer = () => {
 
         <div className="mt-12 pt-8 border-t border-gray-700 text-center">
           <p className="text-sm text-gray-400">
-            &copy; {new Date().getFullYear()} AutoXP. Tous droits réservés.
+            &copy; {new Date().getFullYear()} RS DEPANNAGE. Tous droits réservés.
           </p>
         </div>
       </div>
