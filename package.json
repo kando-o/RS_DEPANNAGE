@@ -1,9 +1,9 @@
 {
   "name": "rs-depannage",
   "private": true,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
-  "homepage": "https://kando-o.github.io/rs-depannage",
+	"homepage": "https://kando-o.github.io/RS_DEPANNAGE",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
