@@ -1,11 +1,7 @@
 import './App.css';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
-import MainLayout from './layout/MainLayout';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import ThankYou from './components/ThankYou';
 import Loading from './components/shared/Loading/Loading'; 
-import NotFound404 from './page/NotFound404';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 function App() {
 
@@ -19,7 +15,7 @@ function App() {
 	return (
 		<HelmetProvider>
 			<Helmet>
-				<title>Enlèvement Gratuit et Rapide d'épaves de véhicules 91 - RS DEPANNAGE en Île-de-France et partout en France</title>
+				<title>RS DEPANNAGE Enlèvement Gratuit et Rapide d'épaves de véhicules 91 - RS DEPANNAGE en Île-de-France et partout en France</title>
 				<meta
 					name="description"
 					content="Besoin d'un enlèvement d'épave rapide et gratuit dans le 91 ? RS DEPANNAGE intervient 7j/7 en Île-de-France et partout en France. Contactez-nous !" 
@@ -93,21 +89,13 @@ function App() {
 							"latitude": "49.0139",
 							"longitude": "2.4597"
 						},
-						"serviceType": "Enlèvement d'épaves, Achat de véhicules d'occasion",
+						"serviceType": "Dépannage et Remorquage, Achat de véhicules d'occasion",
 						"areaServed": "France",
 						"priceRange": "Gratuit"
 						}
 					`}
 				</script>
 			</Helmet>
-		
-			<Router>
-				<Routes>
-				<Route path="/" element={<MainLayout />} />
-				<Route path="/message-recu" element={<ThankYou />} />
-				<Route path="*" element={<NotFound404 />} />
-				</Routes>
-			</Router>
 		</HelmetProvider>
 	);
 }
