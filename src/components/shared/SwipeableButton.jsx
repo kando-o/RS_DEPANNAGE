@@ -76,7 +76,7 @@ const SwipeableButton = ({ onSuccess, text = "SLIDE TO CONFIRM", startIcon: Star
       </div>
       <div
         ref={sliderRef}
-        className={`absolute top-1 left-1 w-10 h-10 rounded-full flex items-center justify-center text-white transition-colors ${isActive ? 'bg-green-500' : 'bg-indigo-500'}`}
+        className={`absolute top-1 left-1 w-10 h-10 rounded-full flex items-center justify-center text-white transition-colors ${isActive ? 'bg-green-500' : 'bg-red-500'}`}
         style={{ transform: `translateX(${sliderPosition}px)` }}
         onMouseDown={handleMouseDown}
         onTouchStart={handleTouchStart}

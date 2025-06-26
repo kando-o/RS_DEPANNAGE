@@ -14,17 +14,17 @@ const Footer = () => {
           {/* Company Info */}
           <div>
             <h2 className="text-2xl font-bold mb-4">
-              <span className="bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">
+              <span className="bg-gradient-to-r from-blue-400 to-red-500 text-transparent bg-clip-text">
                 RS DEPANNAGE
               </span>
             </h2>
             <p className="text-sm text-gray-400 mb-4">
-              RS DEPANNAGE, Un service d'Enlèvement Épave Gratuit, disponible partout en France, pour vous débarrasser de vos VHU
+              RS DEPANNAGE, Un service d'Enlèvement Épave, disponible partout en France
             </p>
             <p className="text-sm text-gray-400 mb-4">
-            Nous offrons des solutions de retrait de voiture rapides, professionnelles et gratuites, vous garantissant une tranquillité d'esprit avec un processus sans tracas et respectueux de l'environnement. Nos services sont disponibles 24/7 pour s'adapter à votre emploi du temps, avec tous les documents nécessaires pris en charge !
+            Nous offrons des solutions de retrait de voiture <strong>rapides, professionnelles et fiables</strong> , pour vous débarrasser de vos VHU (Véhicules Hors d’Usage) en toute sérénité. Nos services sont disponibles <strong>24/24 & 7/7</strong>  pour s'adapter à votre emploi du temps, avec tous les documents nécessaires pris en charge !
             </p>
-            <button className="bg-gradient-to-r from-blue-400 to-purple-500 hover:scale-105 text-white font-bold py-2 px-4 rounded transition" onClick={handleClick}>
+            <button className="bg-gradient-to-r from-blue-400 to-red-500 hover:scale-105 text-white font-bold py-2 px-4 rounded transition" onClick={handleClick}>
               Contactez Nous
             </button>
           </div>
@@ -32,7 +32,7 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Nos Avantages</h3>
             <ul className="space-y-2">
-              {['Vente Rapide', 'Règlement Rapide par Virement Bancaire', 'Accompagnement Professionnel', 'Service à Domicile'].map((item, index) => (
+              {['Dépannage & Remorquage','Service à Domicile', 'Vente Rapide', 'Règlement Rapide par Virement Bancaire', 'Accompagnement Professionnel'].map((item, index) => (
                 <li key={index} className="flex items-center">
                   <svg className="h-4 w-4 mr-2 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />

@@ -72,7 +72,7 @@ export default function ContactForm() {
           <div className="flex items-center">
             <Phone className="text-indigo-600 w-5 h-5 md:w-6 md:h-6 mr-3 md:mr-4 flex-shrink-0" />
             <div>
-              <h3 className="text-lg md:text-xl font-medium">Call Us</h3>
+              <h3 className="text-lg md:text-xl font-medium">Contactez nous</h3>
               <a href="tel:+213776677887" className="text-sm md:text-base text-gray-600">06 51 60 58 83</a>
             </div>
           </div>
@@ -170,7 +170,7 @@ export default function ContactForm() {
 
           <button
             type="submit"
-            className="flex items-center justify-center px-4 py-2 md:px-6 md:py-3 bg-gray-900 text-white font-medium rounded-md hover:bg-black text-sm md:text-base transition duration-300 ease-in-out"
+            className="flex items-center justify-center px-4 py-2 md:px-6 md:py-3 bg-gray-900 text-white font-medium rounded-md text-sm md:text-base transition duration-300 ease-in-out hover:bg-red-600"
           >
             Envoyer le message
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-4 h-4 md:w-5 md:h-5 ml-2">

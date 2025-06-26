@@ -45,37 +45,38 @@ const Advantage = () => {
   const features = [
     {
       icon: SiPagespeedinsights,
-      title: "Vente Rapide",
+      title: "Remorquage & Dépannage",
       description:
-        "En moins de 5 minutes, obtenez gratuitement votre estimation, planifiez un rendez-vous avec un professionnel du réseau RD DEPANNAGE, et vendez votre voiture en moins d'une heure.",
+        " Une panne ou un accident ? Nos équipes interviennent 24h/24 et 7j/7 partout en France pour le remorquage ou le dépannage de votre véhicule. Un service rapide, fiable et au meilleur prix, où que vous soyez.",
     },
+		{
+      icon: SiHomeadvisor,
+      title: "SERVICE À DOMICILE",
+      description:
+        "Nous intervenons partout en France et nous nous déplaçons directement à votre domicile pour un enlèvement d’épave rapide, efficace et sans contrainte. Un service sur mesure, pensé pour votre tranquillité.",
+    },
+		{
+			icon: FaFileCircleCheck,
+			title: "Vente Simplifiée avec Accompagnement Professionnel",
+			description:
+				"En moins de 5 minutes, obtenez gratuitement votre estimation, Vendez votre voiture en toute sérénité. Un professionnel vous assiste et prend en charge toutes les démarches administratives.",
+		},
     {
       icon: FaCreditCard,
       title: " en espèces ou virement bancaire instantanée",
       description:
         "Vous recevrez votre paiement par virement bancaire sous 48 à 72 heures ouvrées, dès que vous aurez accepté l'offre finale proposée par le professionnel après votre rendez-vous.",
     },
-    {
-      icon: FaFileCircleCheck,
-      title: "Vente Simplifiée avec Accompagnement Professionnel",
-      description:
-        "Vendez votre voiture en toute sérénité. Un professionnel vous assiste et prend en charge toutes les démarches administratives.",
-    },
-    {
-      icon: SiHomeadvisor,
-      title: "SERVICE À DOMICILE",
-      description:
-        "Nous intervenons partout en France et nous nous déplaçons directement à votre domicile pour l'enlèvement rapide et efficace de vos épaves.",
-    },
+    
   ];
 
   return (
     <div ref={advantage} className='bg-white py-24 mt-24 md:mt-2 md:py-12 flex flex-col'>
-      <div className='py-1 self-center px-4 rounded-full border border-pink-600 text-sm font-extralight text-pink-600'>
+      <div className='py-1 self-center px-4 rounded-full border border-pink-600 text-lg font-extralight text-pink-600'>
         Nos Avantages
       </div>
-      <h1 className='text-2xl mt-10 bg-gradient-to-r from-blue-300 to-indigo-600 text-transparent bg-clip-text md:text-3xl lg:text-3xl font-bold text-center mb-14'>
-        Pourquoi RD DEPANNAGE ?
+      <h1 className='text-2xl mt-10  md:text-3xl lg:text-3xl font-bold text-center mb-14'>
+        Pourquoi RD  <span className="bg-gradient-to-r from-zinc-900 to-red-500 text-transparent bg-clip-text">DEPANNAGE ?</span>
       </h1>
       <div className="container mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 gap-8">
         {features.map((feature, index) => (

@@ -78,7 +78,7 @@ const Testimonial = () => {
   return (
     <section className="px-8 py-10 rounded-lg">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text md:text-4xl lg:text-4xl font-bold text-center mb-6">
+        <h2 className="text-3xl bg-gradient-to-r from-purple-600 to-orange-500 text-transparent bg-clip-text md:text-4xl lg:text-4xl font-bold text-center mb-6">
           Ce que nos clients disent de nous !
         </h2>
         <p className="text-gray-600 text-center text-sm md:text-lg  mb-8">

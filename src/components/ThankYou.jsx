@@ -58,7 +58,7 @@ export default function ThankYou() {
 
 				<meta name="twitter:card" content="summary_large_image" loading="lazy" />
 				<meta name="twitter:title" content="Merci pour votre message | EPAVEAUTOMOBILE - Épaviste agréé" />
-				<meta name="twitter:description" content="Nous avons bien reçu votre message et vous répondrons rapidement. Enlèvement d'épaves gratuit en Île-de-France et dans toute la France !" />
+				<meta name="twitter:description" content="Nous avons bien reçu votre message et vous répondrons rapidement. Dépannage & Remorquage en Île-de-France et dans toute la France !" />
 				<meta name="twitter:image:alt" content="https://epaveautomobile.fr/assets/pic3-D21_GbCp.jpg" />
 
 				{/* Données structurées (Schema.org) */}
