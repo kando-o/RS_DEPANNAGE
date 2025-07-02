@@ -76,7 +76,7 @@ const Advantage = () => {
         Nos Avantages
       </div>
       <h1 className='text-2xl mt-10  md:text-3xl lg:text-3xl font-bold text-center mb-14'>
-        Pourquoi RD  <span className="bg-gradient-to-r from-zinc-900 to-red-500 text-transparent bg-clip-text">DEPANNAGE ?</span>
+        Pourquoi RS  <span className="bg-gradient-to-r from-zinc-900 to-red-500 text-transparent bg-clip-text">DEPANNAGE ?</span>
       </h1>
       <div className="container mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 gap-8">
         {features.map((feature, index) => (

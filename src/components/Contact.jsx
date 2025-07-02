@@ -6,7 +6,7 @@ import { MdEmail } from "react-icons/md";
 const Contact = () => {
 
     const handlePhoneSuccess = () => {
-        window.location.href = "tel:0033651605883"; 
+        window.location.href = "tel:0651605883"; 
       };
     
       const handleEmailSuccess = () => {

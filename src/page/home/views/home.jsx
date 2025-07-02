@@ -58,7 +58,7 @@ function home() {
 							"description": "RS DEPANNAGE offre un service d'enlèvement gratuit des épaves partout en France. Vendez votre véhicule avec facilité, rapidité et sécurité.",
 							"image": "https://RS DEPANNAGE.fr/assets/pic2-B4MtFGv-.jpg",
 							"url": "https://RS DEPANNAGE.fr",
-							"telephone": "+33622222018",
+							"telephone": "+336 51 60 58 83",
 							"address": {
 								"@type": "PostalAddress",
 								"streetAddress": "18 allée des Irlandais, 91300 Massy",
