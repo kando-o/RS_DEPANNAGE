@@ -1,17 +1,19 @@
 import React, { useState } from 'react';
 import { Phone, Mail, MapPin } from "lucide-react";
 import { useNavigate } from 'react-router-dom';
-import emailjs from 'emailjs-com'
 
 export default function ContactForm() {
   const navigate = useNavigate();
   const [emailError, setEmailError] = useState('');
+	const [status, setStatus] = useState(null);
 
-  const [email, setEmail] = useState('');
-  const [name, setName] = useState('');
-  const [phone, setPhone] = useState('');
-  const [cp, setCp] = useState('');
-  const [message, setMessage] = useState('');
+ 	const [form, setForm] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    postCode: '',
+    message: ''
+  });
 
   const handleKeyDown = (e) => {
     const allowedKeys = ['Backspace', 'Delete', 'ArrowLeft', 'ArrowRight', 'Tab'];
@@ -25,37 +27,39 @@ export default function ContactForm() {
     return emailRegex.test(email);
   };
 
+	const handleChange = (e) => {
+    const { name, value } = e.target;
+    setForm(prev => ({ ...prev, [name]: value }));
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const formData = {
-      name,
-      email,
-      phone,
-      zipcode: cp,
-      message
-    };
-
-    if (!validateEmail(email)) {
-      setEmailError("Veuillez entrer une adresse e-mail valide.");
+    if (!validateEmail(form.email)) {
+      setEmailError('Adresse e-mail invalide.');
       return;
     }
 
     setEmailError('');
+		setStatus('Envoi en cours…');
 
-    const serviceid = "service_3tcsdbp" // Email service ID
-    const templateid = "template_4y2fnf9" // Template ID
-    const userid = "ZPRPisl7Oq0Ge9GyR" // Clé publique EmailJS
-	
-		emailjs
-		.send(serviceid, templateid, formData, userid)
-		.then((result) => {
-			console.log('Email envoyé avec succès:', result.text);
-			navigate('/message-recu');
-		})
-		.catch((error) => {
-			console.error('Erreur lors de l\'envoi de l\'email:', error.text);
-		});
+		try {
+      const res = await fetch('/.netlify/functions/send-email', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      });
+
+      if (res.ok) {
+        setStatus('Message envoyé ! 😊');
+        navigate('/message-recu');
+      } else {
+        setStatus('Échec de l’envoi. Réessaie plus tard.');
+      }
+    } catch (err) {
+      console.error('Erreur formulaire :', err);
+      setStatus('Erreur réseau. Réessaie plus tard.');
+    }
   };
 
   return (
@@ -81,7 +85,7 @@ export default function ContactForm() {
             <Mail className="text-indigo-600 w-5 h-5 md:w-6 md:h-6 mr-3 md:mr-4 flex-shrink-0" />
             <div>
               <h3 className="text-lg md:text-xl font-medium">Email</h3>
-              <a href="mailto:RSDEPANNAGE@XXX.fr" className="text-sm md:text-base text-gray-600">RSDEPANNAGE@XXX.fr</a>
+              <a href="mailto:contact@rsdepannage.com" className="text-sm md:text-base text-gray-600">contact@rsdepannage.com</a>
             </div>
           </div>
 
@@ -109,7 +113,8 @@ export default function ContactForm() {
               <input
                 type="text"
                 name="name"
-                onChange={(e) => setName(e.target.value)}
+								value={form.name}
+                onChange={handleChange}
                 placeholder="Nom et Prénom"
                 className="w-full px-3 py-2 md:px-4 md:py-3 bg-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 text-sm md:text-base"
                 required
@@ -120,7 +125,8 @@ export default function ContactForm() {
               <input
                 type="email"
                 name="email"
-                onChange={(e) => setEmail(e.target.value)}
+								value={form.email}
+                onChange={handleChange}
                 placeholder="Email"
                 className={`w-full px-3 py-2 md:px-4 md:py-3 bg-gray-100 rounded-md focus:outline-none focus:ring-2 ${emailError ? 'focus:ring-red-500' : 'focus:ring-indigo-500'} text-sm md:text-base`}
                 required
@@ -131,27 +137,29 @@ export default function ContactForm() {
           <div>
             <input
               type="tel"
-              name="project"
+              name="phone"
               placeholder="Téléphone"
-              onChange={(e) => setPhone(e.target.value)}
+							value={form.phone}
+              onChange={handleChange}
+              onKeyDown={handleKeyDown}
               className="w-full px-3 py-2 md:px-4 md:py-3 bg-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 text-sm md:text-base"
               required
               pattern="[0-9]{10}"
               minLength="10"
               maxLength="10"
-              onKeyDown={handleKeyDown}
             />
           </div>
           <div>
             <input
               type="text"
-              name="cp"
-              onChange={(e) => setCp(e.target.value)}
+              name="postCode"
+							value={form.postCode}
+              onChange={handleChange}
+              onKeyDown={handleKeyDown}
               placeholder="Code Postal"
               className="w-full px-3 py-2 md:px-4 md:py-3 bg-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 text-sm md:text-base"
               required
               pattern="[0-9]{5}"
-              onKeyDown={handleKeyDown}
             />
           </div>
 
@@ -159,7 +167,8 @@ export default function ContactForm() {
             <textarea
               name="message"
               placeholder="Message"
-              onChange={(e) => setMessage(e.target.value)}
+							value={form.message}
+              onChange={handleChange}
               rows="4"
               className="w-full px-3 py-2 md:px-4 md:py-3 bg-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 text-sm md:text-base"
               required
@@ -177,6 +186,7 @@ export default function ContactForm() {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
             </svg>
           </button>
+					{status && <p className="mt-2 text-center">{status}</p>}
         </form>
       </div>
     </section>

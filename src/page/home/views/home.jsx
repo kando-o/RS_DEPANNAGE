@@ -24,7 +24,7 @@ function home() {
 					/>
 					<meta name="author" content="RS DEPANNAGE" />
 					<meta name="robots" content="index, follow" />
-					<link rel="canonical" href="https://RSDEPANNAGE.fr" /> {/* A changer */}
+					<link rel="canonical" href="https://www.rsdepannage.com" />
 
 					{/*  Balises Open Graph (Facebook, Whatsapp) */}
 

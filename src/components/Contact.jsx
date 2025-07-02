@@ -10,7 +10,7 @@ const Contact = () => {
       };
     
       const handleEmailSuccess = () => {
-        window.location.href = "mailto:RSDEPANNGE@epaveautomobile.fr"; // à changer
+        window.location.href = "mailto:contact@rsdepannage.com";
       };
 
   return (
