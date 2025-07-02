@@ -43,15 +43,15 @@ export default function ThankYou() {
 				<meta name="author" content="RS DEPANNAGE" />
 				<meta name="robots" content="noindex, follow" />
 
-				<link rel="canonical" href="https://epaveautomobile.fr/message-recu" />
+				<link rel="canonical" href="https://www.rsdepannage.com/message-recu" />
 
 				{/* Open Graph (Facebook, WhatsApp) */}
 
-				<meta property="og:title" content="Merci pour votre message | EPAVEAUTOMOBILE - Épaviste agréé" />
+				<meta property="og:title" content="Merci pour votre message | RS DEPANNAGE - Épaviste agréé" />
 				<meta property="og:description" content="Nous avons bien reçu votre message ! Notre équipe vous répondra rapidement. Besoin d'un enlèvement d'épave ? Contactez-nous !" />
 				<meta property="og:type" content="website" />
-				<meta property="og:url" content="https://epaveautomobile.fr/message-recu" />
-				<meta property="og:image:alt" content="https://epaveautomobile.fr/assets/pic3-D21_GbCp.jpg" />
+				<meta property="og:url" content="https://www.rsdepannage.com/message-recu" />
+				<meta property="og:image:alt" content="https://www.rsdepannage.com/assets/pic3-D21_GbCp.jpg" />
 				<meta property="og:site_name" content="EPAVEAUTOMOBILE" />
 
 				{/* Twitter Cards */}
@@ -59,7 +59,7 @@ export default function ThankYou() {
 				<meta name="twitter:card" content="summary_large_image" loading="lazy" />
 				<meta name="twitter:title" content="Merci pour votre message | EPAVEAUTOMOBILE - Épaviste agréé" />
 				<meta name="twitter:description" content="Nous avons bien reçu votre message et vous répondrons rapidement. Dépannage & Remorquage en Île-de-France et dans toute la France !" />
-				<meta name="twitter:image:alt" content="https://epaveautomobile.fr/assets/pic3-D21_GbCp.jpg" />
+				<meta name="twitter:image:alt" content="https://www.rsdepannage.com/assets/pic3-D21_GbCp.jpg" />
 
 				{/* Données structurées (Schema.org) */}
 
@@ -70,15 +70,15 @@ export default function ThankYou() {
 							"@type": "WebPage",
 							"name": "Merci pour votre message | EPAVEAUTOMOBILE - Épaviste agréé",
 							"description": "Nous avons bien reçu votre message ! Notre équipe vous contactera sous peu. Besoin d'un enlèvement d'épave ? Contactez-nous.",
-							"url": "https://epaveautomobile.fr/message-recu",
-							"image": "https://epaveautomobile.fr/assets/pic3-D21_GbCp.jpg",
+							"url": "https://www.rsdepannage.com/message-recu",
+							"image": "https://www.rsdepannage.com/assets/pic3-D21_GbCp.jpg",
 							"publisher": {
 								"@type": "Organization",
 								"name": "EPAVEAUTOMOBILE",
-								"url": "https://epaveautomobile.fr",
+								"url": "https://www.rsdepannage.com",
 								"logo": {
 									"@type": "ImageObject",
-									"url": "https://epaveautomobile.fr/assets/logo.png"
+									"url": "https://www.rsdepannage.com/assets/logo.png"
 								}
 							}
 						}

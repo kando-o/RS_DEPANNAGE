@@ -1,8 +1,12 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import aboutImage from '../assets/images/about.png';
 
 const About = () => {
+		const textRefs = useRef([]);
+		const buttonRef = useRef(null);
+
+	
   useEffect(() => {
     gsap.fromTo(
       '.about-image',
@@ -18,6 +22,20 @@ const About = () => {
       '.about-description',
       { y: 50, opacity: 0 },
       { y: 0, opacity: 1, duration: 1, delay: 1 }
+    );
+
+		const tl = gsap.timeline({ defaults: { ease: 'power3.out', duration: 1.2 } });
+
+    tl.fromTo(
+      textRefs.current,
+      { opacity: 0, y: 50 },
+      { opacity: 1, y: 0, stagger: 0.2 }
+    )
+    .fromTo(
+      buttonRef.current,
+      { opacity: 0, scale: 0.8, rotation: -15 },
+      { opacity: 1, scale: 1, rotation: 0, duration: 0.8 },
+      "-=0.5" // Overlap with the previous animation
     );
   }, []);
 
@@ -38,9 +56,20 @@ const About = () => {
         <h1 className='text-3xl bg-gradient-to-r from-zinc-900 to-red-500 text-transparent bg-clip-text md:text-4xl lg:text-4xl font-bold text-center mb-6 about-header'>
           À propos de nous
         </h1>
-        <p className='text-base md:text-lg lg:text-lg text-center max-w-3xl about-description'>
-        Vous avez un véhicule trop vieux, hors d’usage ou immobilisé ? <br />Confiez-le à notre service de <span className='font-bold bg-gradient-to-r from-zinc-900 to-red-500 text-transparent bg-clip-text'>Remorquage & Dépannage dans toute la France</span>. Nous intervenons rapidement pour l’enlèvement de tous types de VHU (Véhicules Hors d’Usage) : <strong>voitures, motos, scooters, jet-skis, camping-cars, caravanes, bateaux, utilitaires — qu’ils roulent ou non, accidentés ou non.</strong> 
-        </p>
+       <p
+					ref={(el) => textRefs.current[1] = el}
+					className="text-base md:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto mt-4 md:mt-6"
+				>
+					Dépannage et remorquage 24h/24 dans toute la France avec <span className='font-bold bg-gradient-to-r from-zinc-900 to-red-500 text-transparent bg-clip-text'>RS DEPANNAGE</span>.
+				</p>
+				<p
+					ref={(el) => textRefs.current[2] = el}
+					className="text-base text-center md:text-lg lg:text-xl text-gray-600 mb-6 md:mb-8 max-w-3xl mx-auto"
+				>
+					Nous intervenons rapidement sur tous types de véhicules — épaves, en panne, accidentés, gagés ou non pour un remorquage fiable et un dépannage efficace. 
+					<br />
+					Et si vous souhaitez vendre votre voiture, nous vous accompagnons aussi dans une procédure simple, rapide et sécurisée.
+				</p>
       </div>
     </div>
   );

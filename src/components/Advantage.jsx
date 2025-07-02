@@ -47,7 +47,7 @@ const Advantage = () => {
       icon: SiPagespeedinsights,
       title: "Remorquage & Dépannage",
       description:
-        " Une panne ou un accident ? Nos équipes interviennent 24h/24 et 7j/7 partout en France pour le remorquage ou le dépannage de votre véhicule. Un service rapide, fiable et au meilleur prix, où que vous soyez.",
+        " Une épave en panne ou un accident ? Nos équipes interviennent 24h/24 et 7j/7 partout en France pour le remorquage ou le dépannage de votre véhicule. Un service rapide, fiable et au meilleur prix, où que vous soyez.",
     },
 		{
       icon: SiHomeadvisor,

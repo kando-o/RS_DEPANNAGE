@@ -45,20 +45,13 @@ const Hero = () => {
 					<br />
 					<span className='text-3xl md:text-4xl lg:text-5xl'>Gratuit sur toute la France</span>
 				</h1>
-				<p
+				<p 
 					ref={(el) => textRefs.current[1] = el}
-					className="text-base md:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto mt-4 md:mt-6"
+					className='text-base md:text-lg lg:text-lg text-center md:mb-8 mx-auto mb-6 max-w-3xl about-description'
 				>
-					Dépannage et remorquage 24h/24 dans toute la France avec <span className='font-bold bg-gradient-to-r from-zinc-900 to-red-500 text-transparent bg-clip-text'>RS DEPANNAGE</span>.
-				</p>
-				<p
-					ref={(el) => textRefs.current[2] = el}
-					className="text-base md:text-lg lg:text-xl text-gray-600 mb-6 md:mb-8 max-w-3xl mx-auto"
-				>
-					Nous intervenons rapidement sur tous types de véhicules — en panne, accidentés, gagés ou non pour un remorquage fiable et un dépannage efficace. 
-					<br />
-					Et si vous souhaitez vendre votre voiture, nous vous accompagnons aussi dans une procédure simple, rapide et sécurisée.
-				</p>
+        Vous avez un véhicule trop vieux, hors d’usage, immobilisé ou épave ? <br />Confiez-le à notre service de <span className='font-bold bg-gradient-to-r from-zinc-900 to-red-500 text-transparent bg-clip-text'>Remorquage & Dépannage dans toute la France</span>. Nous intervenons rapidement pour l’enlèvement de tous types de VHU (Véhicules Hors d’Usage) : <strong>voitures, motos, scooters, jet-skis, camping-cars, caravanes, bateaux, utilitaires — qu’ils roulent ou non, accidentés ou non.</strong> 
+        </p>
+				
 				<div className="flex flex-col w-[50%] md:w-[50%] lg:w-[30%] mx-auto gap-2">
 					<button
 						ref={buttonRef}

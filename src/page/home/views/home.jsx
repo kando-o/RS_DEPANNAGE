@@ -4,7 +4,7 @@ import { Helmet, HelmetProvider } from 'react-helmet-async';
 function home() {
 
 	const [loading, setLoading] = useState(false);
-	const metaImage = "https://RSDEPANNAGE.fr/assets/pic2-B4MtFGv-.jpg";
+	const metaImage = "https://www.rsdepannage.com/assets/pic2-B4MtFGv-.jpg";
 
 	if (loading) {
 		return <Loading />; 
@@ -34,7 +34,7 @@ function home() {
 					<meta property="og:description" content="Service d'enlèvement gratuit et rapide des épaves en Île-de-France et partout en France. Contactez RS DEPANNAGE pour un service fiable et professionnel." />
 					<meta property="og:image" content={metaImage} />
 					<meta property="og:image:alt" content="RS DEPANNAGE - Enlèvement gratuit d'épaves en Île-de-France" />
-					<meta property="og:url" content="https://RS DEPANNAGE.fr" />
+					<meta property="og:url" content="www.rsdepannage.com" />
 					<meta property="og:type" content="website" />
 
 					{/* Balises Twitter Cards */}
@@ -56,8 +56,8 @@ function home() {
 							"@type": "AutoService",
 							"name": "RS DEPANNAGE - Enlèvement des épaves 100% Gratuit en France",
 							"description": "RS DEPANNAGE offre un service d'enlèvement gratuit des épaves partout en France. Vendez votre véhicule avec facilité, rapidité et sécurité.",
-							"image": "https://RS DEPANNAGE.fr/assets/pic2-B4MtFGv-.jpg",
-							"url": "https://RS DEPANNAGE.fr",
+							"image": "https://www.rsdepannage.com/assets/pic2-B4MtFGv-.jpg",
+							"url": "https://www.rsdepannage.com",
 							"telephone": "+336 51 60 58 83",
 							"address": {
 								"@type": "PostalAddress",
