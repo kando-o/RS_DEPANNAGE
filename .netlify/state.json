@@ -1,0 +1,20 @@
+{
+	"geolocation": {
+		"data": {
+			"city": "Le Coudray-Montceaux",
+			"country": {
+				"code": "FR",
+				"name": "France"
+			},
+			"subdivision": {
+				"code": "IDF",
+				"name": "Île-de-France"
+			},
+			"timezone": "Europe/Paris",
+			"latitude": 48.5673,
+			"longitude": 2.4996,
+			"postalCode": "91830"
+		},
+		"timestamp": 1751897667488
+	}
+}
