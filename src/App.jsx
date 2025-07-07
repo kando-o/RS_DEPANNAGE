@@ -6,7 +6,7 @@ import { useState } from 'react';
 function App() {
 
 	const [loading, setLoading] = useState(false);
-	const metaImage = "https://RS DEPANNAGE.fr/assets/pic2-B4MtFGv-.jpg";
+	const metaImage = "https://rsdepannage.com/assets/pic2-B4MtFGv-.jpg";
 
 	if (loading) {
 		return <Loading />; 
@@ -36,7 +36,7 @@ function App() {
 				<meta property="og:description" content="Service d'enlèvement gratuit et rapide des épaves en Île-de-France et partout en France. Contactez RS DEPANNAGE pour un service fiable et professionnel." />
 				<meta property="og:image" content={metaImage} />
 				<meta property="og:image:alt" content="RS DEPANNAGE - Enlèvement gratuit d'épaves en Île-de-France" />
-				<meta property="og:url" content="https://RS DEPANNAGE.fr" />
+				<meta property="og:url" content="https://rsdepannage.com" />
 				<meta property="og:type" content="website" />
 
 				{/* Balises Twitter Cards */}
@@ -58,14 +58,14 @@ function App() {
 						"@type": "AutoService",
 						"name": "RS DEPANNAGE - Enlèvement des épaves 100% Gratuit en France",
 						"description": "RS DEPANNAGE offre un service d'enlèvement gratuit des épaves partout en France. Vendez votre véhicule avec facilité, rapidité et sécurité.",
-						"image": "https://RS DEPANNAGE.fr/assets/pic2-B4MtFGv-.jpg",
+						"image": "https://rsdepannage.com/assets/pic2-B4MtFGv-.jpg",
 						"telephone": "+336 51 60 58 83",
 						"email": "contact@rsdepannage.com",
   					"url": "https://rsdepannage.com"
 						"address": {
 							"@type": "PostalAddress",
 							"streetAddress": "18 allée des Irlandais, 91300 Massy",
-							"addressLocality": "Louvres",
+							"addressLocality": "Massy",
 							"addressRegion": "Île-de-France",
 							"postalCode": "91300",
 							"addressCountry": "France"
