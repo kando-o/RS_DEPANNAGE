@@ -6,7 +6,7 @@ const Navbar = () => {
   const navbarRef = useRef(null);
 
   const navItems = [
-    { name: 'Acceuil', href: '#', current: true },
+    { name: 'Accueil', href: '#', current: true },
     { name: 'A propos de nous', href: '#about', current: false },
     { name: 'Rachat', href: '#rachat', current: false },
     { name: 'Contact', href: '#contact', current: false },

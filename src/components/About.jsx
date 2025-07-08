@@ -53,9 +53,9 @@ const About = () => {
         <div className='py-1 px-4 rounded-full border border-pink-600 text-lg font-extralight text-pink-600 mb-6'>
           Qui sommes nous ?
         </div>
-        <h1 className='text-3xl bg-gradient-to-r from-zinc-900 to-red-500 text-transparent bg-clip-text md:text-4xl lg:text-4xl font-bold text-center mb-6 about-header'>
+        <h2 className='text-3xl bg-gradient-to-r from-zinc-900 to-red-500 text-transparent bg-clip-text md:text-4xl lg:text-4xl font-bold text-center mb-6 about-header'>
           À propos de nous
-        </h1>
+        </h2>
        <p
 					ref={(el) => textRefs.current[1] = el}
 					className="text-base md:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto mt-4 md:mt-6"

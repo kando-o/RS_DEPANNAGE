@@ -31,9 +31,9 @@ const Gallery = () => {
         <div className='py-1 px-4 rounded-full border border-pink-600 text-lg font-extralight text-pink-600 mt-10 mb-5'>
             Notre Gallerie 
         </div>
-        <h1 className='text-2xl sm:text-4xl font-bold bg-gradient-to-r from-zinc-900 to-red-500 text-transparent bg-clip-text text-center md:mb-12 lg:mb-12'>
+        <h2 className='text-2xl sm:text-4xl font-bold bg-gradient-to-r from-zinc-900 to-red-500 text-transparent bg-clip-text text-center md:mb-12 lg:mb-12'>
         Découverer notre Gallerie ! 
-        </h1>
+        </h2>
         <ImageSlider 
         images={images}
         autoSlideInterval={5000}

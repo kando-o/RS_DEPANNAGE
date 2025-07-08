@@ -75,9 +75,9 @@ const Advantage = () => {
       <div className='py-1 self-center px-4 rounded-full border border-pink-600 text-lg font-extralight text-pink-600'>
         Nos Avantages
       </div>
-      <h1 className='text-2xl mt-10  md:text-3xl lg:text-3xl font-bold text-center mb-14'>
+      <h2 className='text-2xl mt-10  md:text-3xl lg:text-3xl font-bold text-center mb-14'>
         Pourquoi RS  <span className="bg-gradient-to-r from-zinc-900 to-red-500 text-transparent bg-clip-text">DEPANNAGE ?</span>
-      </h1>
+      </h2>
       <div className="container mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 gap-8">
         {features.map((feature, index) => (
           <div key={index} ref={addToRefs}>
