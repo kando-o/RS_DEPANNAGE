@@ -62,6 +62,7 @@ function App() {
 						"telephone": "+336 51 60 58 83",
 						"email": "contact@rsdepannage.com",
   					"url": "https://rsdepannage.com",
+						"logo": "https://rsdepannage.com/favicon-96x96.png",
 						"address": {
 							"@type": "PostalAddress",
 							"streetAddress": "18 allée des Irlandais, 91300 Massy",
