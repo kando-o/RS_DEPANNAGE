@@ -9,7 +9,7 @@
   external_node_modules   = ["nodemailer"]
 
 [[redirects]]
-  fr   = "http://rsdepannage.com/*"
+  from   = "http://rsdepannage.com/*"
   to     = "https://rsdepannage.com/:splat"
   status = 301
   force  = true
