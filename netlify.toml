@@ -8,19 +8,15 @@
   node_bundler            = "esbuild"
   external_node_modules   = ["nodemailer"]
 
+# Redirection http -> https (OK)
 [[redirects]]
   from   = "http://rsdepannage.com/*"
   to     = "https://rsdepannage.com/:splat"
   status = 301
   force  = true
 
+# SPA React Router (IMPORTANT)
 [[redirects]]
-  from   = "https://www.rsdepannage.com/*"
-  to     = "https://rsdepannage.com/:splat"
-  status = 301
-  force  = true
-
-[[headers]]
-  for = "/*"
-  [headers.values]
-  Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+	from = "/*"
+	to = "/index.html"
+	status = 200
